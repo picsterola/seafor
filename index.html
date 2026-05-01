@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SeaFor · Seattle Forward · Civic infrastructure for pragmatic governance</title>
+  <meta name="description" content="SeaFor is building durable civic infrastructure for pragmatic, outcomes-focused governance in Seattle. Public education, candidate recruitment, policy oversight, coalition building." />
+  <meta name="theme-color" content="#0E0F0C" />
+
+  <meta property="og:title" content="SeaFor · Seattle Forward" />
+  <meta property="og:description" content="Seattle doesn't need another campaign. It needs an operating system." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230E0F0C'/><path d='M7 9 H11 V23 H7 Z M21 9 H25 V23 H21 Z' fill='%23F4F1EA'/><path d='M11 9 H21 V11 H13 V15 H20 V17 H13 V21 H21 V23 H11 Z' fill='%23F4F1EA'/></svg>" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Brand config: change BRAND_NAME and BRAND_TAGLINE here to swap the brand globally. -->
+  <script>
+    window.BRAND = {
+      shortName: "SeaFor",
+      longName: "Seattle Forward",
+      tagline: "Civic infrastructure for pragmatic governance.",
+      contactEmail: "founders@seafor.org"
+    };
+  </script>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="SeaFor home">
+        <!-- The mark: bracketed S/F. Survives a rename. Only the wordmark swaps. -->
+        <svg class="brand-mark" viewBox="0 0 44 28" aria-hidden="true" focusable="false">
+          <path d="M4 2 H12 V6 H8 V22 H12 V26 H4 Z" fill="currentColor"/>
+          <path d="M40 2 H32 V6 H36 V22 H32 V26 H40 Z" fill="currentColor"/>
+          <text x="22" y="20" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="14" fill="currentColor" font-style="italic">SF</text>
+        </svg>
+        <span class="brand-wordmark">
+          <span class="brand-name" data-brand-name>SeaFor</span>
+          <span class="brand-divider" aria-hidden="true">·</span>
+          <span class="brand-long" data-brand-long>Seattle Forward</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#why">Why this exists</a>
+        <a href="#work">The work</a>
+        <a href="#tracker">Tracker</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.5" y1="4.5" x2="6.6" y2="6.6"/><line x1="17.4" y1="17.4" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.6" y2="17.4"/><line x1="17.4" y1="6.6" x2="19.5" y2="4.5"/></g></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z" fill="currentColor"/></svg>
+        </button>
+        <a class="btn btn-primary" href="#contact">Talk to Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-meta">
+          <span class="dispatch-tag"><span class="dot"></span> Dispatch № 001 · Seattle</span>
+          <span class="provisional">Working name. The brand can change. The argument can't.</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Seattle doesn't need another campaign.
+          <span class="hero-em">It needs an <em>operating system</em>.</span>
+        </h1>
+
+        <p class="hero-deck">
+          Adults in the room. With a pulse. <span data-brand-name>SeaFor</span> is a 501(c)(4) building durable civic infrastructure for pragmatic, outcomes-focused governance in Seattle: public education, policy oversight, coalition building, and serious candidate support. Long game. Fewer slogans.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#support">Back the project</a>
+          <a class="btn btn-link btn-lg" href="#why">See the plan <span aria-hidden="true">↘</span></a>
+        </div>
+
+        <aside class="hero-seed" aria-label="Coming soon">
+          <span class="mono small uppercase">Coming soon · Public product</span>
+          <p>
+            <strong>The City Hall Tracker.</strong> What actually happened this week, who voted for it, and what it means. Without the spin or the 47-tab agenda packet.
+          </p>
+        </aside>
+      </div>
+
+      <!-- Marquee: editorial swagger, restrained color -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>What passed</span><span class="bullet">●</span>
+          <span>What stalled</span><span class="bullet">●</span>
+          <span>What changed</span><span class="bullet">●</span>
+          <span>Who voted for it</span><span class="bullet">●</span>
+          <span>Spin vs. reality</span><span class="bullet">●</span>
+          <span>What passed</span><span class="bullet">●</span>
+          <span>What stalled</span><span class="bullet">●</span>
+          <span>What changed</span><span class="bullet">●</span>
+          <span>Who voted for it</span><span class="bullet">●</span>
+          <span>Spin vs. reality</span><span class="bullet">●</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section section-why" id="why">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 01 · Why this exists</span>
+        </div>
+
+        <div class="why-grid">
+          <h2 class="display-2">
+            One side built <em>infrastructure</em>.<br/>
+            The other side keeps bringing <span class="redact">slide decks</span> to gunfights.
+          </h2>
+
+          <div class="why-body">
+            <p class="lede">
+              Seattle's progressive organizations have built formidable political infrastructure: coordinated candidate pipelines, disproportionately influential media, advocacy machines that consistently shape who gets elected and what gets done.
+            </p>
+            <p>
+              Pragmatic, middle-of-the-road voices, the broad center of Seattle's electorate, have nothing comparable. Civic groups and business associations work in silos. Candidates who support evidence-based policy run without sustained institutional backing. The other side doesn't just win elections; it has built the permanent infrastructure that makes winning routine, at the ballot box and at the dais.
+            </p>
+            <p class="emphasis">
+              <span data-brand-name>SeaFor</span> is the infrastructure play. Not a campaign vehicle with better branding. Not a one-cycle committee that disappears after November. A durable, moderate, pro-governance operating system designed to outlast any single election.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section section-work" id="work">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 02 · The work</span>
+        </div>
+
+        <h2 class="display-2 work-title">
+          Five workstreams. Built to <em>actually ship</em>.
+        </h2>
+
+        <ol class="work-grid" role="list">
+          <li class="work-card work-card--lg">
+            <div class="card-num mono">01</div>
+            <h3>Public education &amp; narrative change</h3>
+            <p>Tracking City Hall in plain English. Fair, nuanced, deep. The kind of policy reporting Seattle's existing media landscape has stopped doing. Plus credible, data-based content for younger and underrepresented voters where they actually are.</p>
+          </li>
+          <li class="work-card">
+            <div class="card-num mono">02</div>
+            <h3>Candidate recruitment &amp; electoral support</h3>
+            <p>Identify, recruit, and develop pragmatic Council candidates. Sustained institutional backing through affiliated PAC and IE structures, with a clean firewall and adult legal review.</p>
+          </li>
+          <li class="work-card">
+            <div class="card-num mono">03</div>
+            <h3>Policy oversight</h3>
+            <p>Real analysis on public safety, homelessness, housing, permitting, and land use. Public support for the good-governance moves sitting electeds are already trying to make.</p>
+          </li>
+          <li class="work-card">
+            <div class="card-num mono">04</div>
+            <h3>Coalition building</h3>
+            <p>Investing in the ecosystem: civic orgs, trade associations, neighborhood groups, and individual voters who are tired of working in silos. Issue alignment, not a shadow campaign HQ.</p>
+          </li>
+          <li class="work-card">
+            <div class="card-num mono">05</div>
+            <h3>Civic events</h3>
+            <p>Forums, panels, and conversations that put Seattleites in the same room as the people running their city. The rare event where the policy is sharper than the catering.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- OPPORTUNITY -->
+    <section class="section section-opp" id="opportunity">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 03 · The immediate opportunity</span>
+        </div>
+
+        <div class="opp-grid">
+          <div class="opp-text">
+            <h2 class="display-2">
+              <span class="year">2026</span> is the test bed.<br/>
+              <span class="year accent">2027</span> is the main event.
+            </h2>
+            <p>
+              The 2026 District 5 vacancy is the rare race where a pragmatic majority on Council can be held, or quietly given away. Winning it isn't the ceiling. It's the rehearsal. The communications, coalition, and accountability infrastructure built this cycle gets deployed across all seven district seats in 2027.
+            </p>
+            <p>
+              For donors and high-trust supporters, this is the early window: fund the legal setup, the public product, and the 2026 test directly tied to the 2027 majority goal. After the cycle starts, you're paying retail.
+            </p>
+          </div>
+
+          <aside class="plate" aria-label="District 5 marker">
+            <div class="plate-top mono">SEATTLE · DIST</div>
+            <div class="plate-num">D5</div>
+            <div class="plate-bottom mono">2026 · TEST BED</div>
+          </aside>
+        </div>
+
+        <div class="opp-timeline" aria-label="Timeline">
+          <div class="tl-row">
+            <div class="tl-year mono">2026</div>
+            <div class="tl-bar"><span class="tl-fill" style="--w:38%"></span></div>
+            <div class="tl-label">D5 special election · message discipline · legal discipline · product velocity</div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-year mono">2027</div>
+            <div class="tl-bar"><span class="tl-fill tl-fill--accent" style="--w:92%"></span></div>
+            <div class="tl-label">All seven district seats · pragmatic majority · full deployment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACKER -->
+    <section class="section section-tracker" id="tracker">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 04 · Flagship product preview</span>
+        </div>
+
+        <div class="tracker-intro">
+          <h2 class="display-2">A City Hall tracker for people who have <em>jobs</em>.</h2>
+          <p>
+            Part accountability engine. Part explain-it-like-I'm-busy briefing. Part insider decoder ring. The first public product from <span data-brand-name>SeaFor</span>, built so a working Seattleite can read it on the bus and know more than 90% of the people quoted in the morning paper.
+          </p>
+        </div>
+
+        <article class="tracker-card" aria-label="Sample tracker preview">
+          <header class="tc-head">
+            <div class="tc-headline">
+              <span class="tc-eyebrow mono uppercase small">This week at City Hall · Sample</span>
+              <h3>What Council did this week</h3>
+            </div>
+            <div class="tc-meta mono small">
+              <span>Vol. 01 · No. 14</span>
+              <span class="tc-dot">●</span>
+              <span>Read time · 4 min</span>
+            </div>
+          </header>
+
+          <div class="tc-body">
+            <ol class="tc-items">
+              <li class="tc-item">
+                <div class="tc-tag tc-tag--passed">Passed</div>
+                <div class="tc-content">
+                  <h4>Permitting timeline reform · CB 120XYZ</h4>
+                  <p>Council adopted shot-clocks on land use review. Will it actually move dirt? Probably yes for small projects, probably not for the towers everyone argues about.</p>
+                  <div class="tc-vote mono small">
+                    <span class="vote-y">Yes 6</span>
+                    <span class="vote-n">No 2</span>
+                    <span class="vote-a">Abstain 1</span>
+                  </div>
+                </div>
+              </li>
+              <li class="tc-item">
+                <div class="tc-tag tc-tag--stalled">Stalled</div>
+                <div class="tc-content">
+                  <h4>Public safety staffing package · Res 32XXX</h4>
+                  <p>Sent back to committee for the third time. Officially "more analysis." Unofficially, somebody's whip count is short.</p>
+                  <div class="tc-vote mono small">
+                    <span>Held in committee</span>
+                  </div>
+                </div>
+              </li>
+              <li class="tc-item">
+                <div class="tc-tag tc-tag--spin">Spin vs. Reality</div>
+                <div class="tc-content">
+                  <h4>"Historic investment in housing"</h4>
+                  <p>The press release says historic. The fiscal note says modest reallocation. Both can be true; only one fits in a tweet.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <footer class="tc-foot mono small">
+            <span>Sources: Council agenda · SEEC filings · Fiscal notes</span>
+            <span class="tc-status">Preview · Not yet live</span>
+          </footer>
+        </article>
+
+        <p class="tracker-foot mono small">
+          <span data-brand-name>SeaFor</span> is the civic engine. The tracker is its first public output. Email list, civic literacy, and accountability. In that order.
+        </p>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="section section-support" id="support">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 05 · Why support this now</span>
+        </div>
+
+        <div class="support-grid">
+          <h2 class="display-2">
+            Get in <em>before</em> the cycle starts.
+          </h2>
+
+          <div class="support-points">
+            <div class="sp">
+              <div class="sp-num mono">i.</div>
+              <div>
+                <h3>Leverage</h3>
+                <p>A 501(c)(4) modeled on what Neighbors for a Better SF, GrowSF, and TogetherSF used to reset San Francisco. The playbook works. It just hasn't been built here yet.</p>
+              </div>
+            </div>
+            <div class="sp">
+              <div class="sp-num mono">ii.</div>
+              <div>
+                <h3>Timing</h3>
+                <p>2026 D5 is the test. 2027 is the main event with all seven district seats on the ballot. Infrastructure built now is the infrastructure deployed then.</p>
+              </div>
+            </div>
+            <div class="sp">
+              <div class="sp-num mono">iii.</div>
+              <div>
+                <h3>Concrete asks</h3>
+                <p>Not abstractions. Counsel and legal setup. A useful public product. A 2026 test tied directly to the 2027 majority goal. A 90-day budget you can actually read.</p>
+              </div>
+            </div>
+            <div class="sp">
+              <div class="sp-num mono">iv.</div>
+              <div>
+                <h3>Discretion</h3>
+                <p>Washington's 501(c)(4) structure protects the privacy of businesses and individuals historically punished for backing fiscally responsible causes. Donor education and counsel guidance from day one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="pullquote">
+          <p>"Three to five killers beats fifteen validators. A decorative board slows decisions, leaks strategy, and gives everyone veto power without responsibility."</p>
+          <cite class="mono small">Internal note · Founding circle</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-row">
+        <div class="contact-left">
+          <span class="section-kicker mono uppercase small">§ 06 · Talk to us</span>
+          <h2 class="display-1">
+            Serious supporters,<br/>aligned orgs, founding circle.
+          </h2>
+          <p>
+            If you're a donor evaluating leverage, an aligned org wondering how we coordinate cleanly, or someone who knows a good District 5 candidate when you see one, start here. Quiet conversations welcome.
+          </p>
+        </div>
+
+        <div class="contact-right">
+          <a class="contact-cta" href="#" data-brand-mailto>
+            <span class="mono small uppercase">Founders · direct line</span>
+            <span class="contact-email" data-brand-email>founders@seafor.org</span>
+            <span class="contact-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <ul class="contact-list mono small">
+            <li><span class="cl-key">Founding circle</span><span class="cl-val">3–5 seats remaining</span></li>
+            <li><span class="cl-key">Entity</span><span class="cl-val">501(c)(4), forming</span></li>
+            <li><span class="cl-key">First test</span><span class="cl-val">2026 · District 5</span></li>
+            <li><span class="cl-key">Counsel</span><span class="cl-val">Engaged</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg class="brand-mark sm" viewBox="0 0 44 28" aria-hidden="true" focusable="false">
+          <path d="M4 2 H12 V6 H8 V22 H12 V26 H4 Z" fill="currentColor"/>
+          <path d="M40 2 H32 V6 H36 V22 H32 V26 H40 Z" fill="currentColor"/>
+          <text x="22" y="20" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="14" fill="currentColor" font-style="italic">SF</text>
+        </svg>
+        <span class="footer-wordmark">
+          <span data-brand-name>SeaFor</span> · <span data-brand-long>Seattle Forward</span>
+        </span>
+      </div>
+
+      <p class="footer-legal mono small">
+        A Washington 501(c)(4) social welfare organization, forming.<br/>
+        Independent of any campaign committee. Activities subject to counsel review.<br/>
+        Working name. Brand may evolve. The argument will not.
+      </p>
+
+      <p class="footer-meta mono small">
+        © <span id="year">2026</span> · <span data-brand-name>SeaFor</span> · Seattle, WA
+      </p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
