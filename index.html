@@ -53,6 +53,7 @@
         <a href="#work">The work</a>
         <a href="#tracker">Tracker</a>
         <a href="#support">Support</a>
+        <a href="./contact.html">Talk to us</a>
       </nav>
 
       <div class="header-actions">
@@ -60,7 +61,7 @@
           <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.5" y1="4.5" x2="6.6" y2="6.6"/><line x1="17.4" y1="17.4" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.6" y2="17.4"/><line x1="17.4" y1="6.6" x2="19.5" y2="4.5"/></g></svg>
           <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z" fill="currentColor"/></svg>
         </button>
-        <a class="btn btn-primary" href="#contact">Talk to Us</a>
+        <a class="btn btn-primary" href="./contact.html">Talk to Us</a>
       </div>
     </div>
   </header>
@@ -68,7 +69,8 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="container hero-grid">
+      <div class="container hero-grid hero-grid--with-art">
+        <div class="hero-text">
         <div class="hero-meta">
           <span class="dispatch-tag"><span class="dot"></span> Dispatch № 001 · Seattle</span>
           <span class="provisional">Working name. The brand can change. The argument can't.</span>
@@ -84,7 +86,7 @@
         </p>
 
         <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="#support">Back the project</a>
+          <a class="btn btn-primary btn-lg" href="./contact.html">Back the project</a>
           <a class="btn btn-link btn-lg" href="#why">See the plan <span aria-hidden="true">↘</span></a>
         </div>
 
@@ -94,6 +96,72 @@
             <strong>The City Hall Tracker.</strong> What actually happened this week, who voted for it, and what it means. Without the spin or the 47-tab agenda packet.
           </p>
         </aside>
+        </div>
+
+        <!-- Hero artwork: editorial bulletin / tracker preview, all SVG -->
+        <figure class="hero-art hero-art--home" aria-hidden="true">
+          <svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <!-- Card -->
+            <rect x="20" y="40" width="440" height="500" rx="8" class="art-paper"/>
+            <!-- Top stripe (red / ink / grey) -->
+            <rect x="20" y="40" width="146" height="6" rx="3" fill="var(--accent)"/>
+            <rect x="166" y="40" width="148" height="6" fill="var(--fg)"/>
+            <rect x="314" y="40" width="146" height="6" rx="3" fill="var(--fg-3)"/>
+
+            <!-- Eyebrow -->
+            <text x="44" y="88" class="art-meta">VOL. 01 · NO. 14 · THIS WEEK</text>
+
+            <!-- Big title -->
+            <text x="44" y="138" class="art-h1">What Council</text>
+            <text x="44" y="178" class="art-h1">did this</text>
+            <text x="44" y="218" class="art-h1 art-h1--em">week.</text>
+
+            <!-- Item 1: PASSED -->
+            <g transform="translate(44 248)">
+              <rect x="0" y="0" width="86" height="22" rx="11" fill="none" stroke="#2E6F45" stroke-width="1.5" class="art-tag-passed"/>
+              <text x="43" y="15" text-anchor="middle" class="art-tag-text art-tag-text--passed">PASSED</text>
+              <text x="104" y="15" class="art-item-title">Permitting reform · CB 120XYZ</text>
+              <g class="art-line">
+                <rect x="104" y="26" width="312" height="5" rx="2"/>
+                <rect x="104" y="38" width="260" height="5" rx="2"/>
+              </g>
+            </g>
+
+            <!-- Item 2: STALLED -->
+            <g transform="translate(44 320)">
+              <rect x="0" y="0" width="86" height="22" rx="11" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="43" y="15" text-anchor="middle" class="art-tag-text art-tag-text--stalled">STALLED</text>
+              <text x="104" y="15" class="art-item-title">Public safety package · Res 32XXX</text>
+              <g class="art-line">
+                <rect x="104" y="26" width="280" height="5" rx="2"/>
+                <rect x="104" y="38" width="230" height="5" rx="2"/>
+              </g>
+            </g>
+
+            <!-- Item 3: SPIN -->
+            <g transform="translate(44 392)">
+              <rect x="0" y="0" width="118" height="22" rx="11" fill="#F2D14A" fill-opacity=".18" stroke="#6A4F00" stroke-width="1.2" class="art-tag-spin"/>
+              <text x="59" y="15" text-anchor="middle" class="art-tag-text art-tag-text--spin">SPIN VS. REALITY</text>
+              <text x="136" y="15" class="art-item-title art-item-title--quote">“Historic investment”</text>
+              <g class="art-line">
+                <rect x="136" y="26" width="264" height="5" rx="2"/>
+                <rect x="136" y="38" width="200" height="5" rx="2"/>
+              </g>
+            </g>
+
+            <!-- Footer rule + meta -->
+            <line x1="44" y1="472" x2="436" y2="472" class="art-rule"/>
+            <text x="44" y="498" class="art-meta">SOURCES · COUNCIL AGENDA · SEEC FILINGS</text>
+            <text x="44" y="514" class="art-meta art-meta--mute">PREVIEW · NOT YET LIVE</text>
+
+            <!-- Corner badge -->
+            <g transform="translate(384 100) rotate(8)">
+              <rect x="0" y="0" width="60" height="60" rx="30" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="30" y="28" text-anchor="middle" class="art-badge-top">SAMPLE</text>
+              <text x="30" y="44" text-anchor="middle" class="art-badge-bottom">Nº 14</text>
+            </g>
+          </svg>
+        </figure>
       </div>
 
       <!-- Marquee: editorial swagger, restrained color -->
@@ -110,6 +178,154 @@
           <span>Who voted for it</span><span class="bullet">●</span>
           <span>Spin vs. reality</span><span class="bullet">●</span>
         </div>
+      </div>
+    </section>
+
+    <!-- DIAGNOSIS - state of the city -->
+    <section class="section section-diag" id="state">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 00 · State of the city</span>
+        </div>
+
+        <div class="diag-head">
+          <h2 class="display-2 diag-h2">
+            This isn't a slump.<br/>
+            It's a <em>structural problem</em>.
+          </h2>
+          <p class="diag-deck">
+            Seattle is objectively near the bottom of major U.S. cities on the metrics that matter to the people who live and work here. State and local policy choices made it this way, and those choices keep compounding. Numbers below are 2025–2026, sourced from CBRE, Cushman &amp; Wakefield, the Tax Foundation, Chief Executive, WalletHub, and the Downtown Seattle Association.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+
+          <article class="stat-card stat-card--lg">
+            <header class="stat-head">
+              <span class="stat-tag mono">Office market</span>
+              <span class="stat-trend stat-trend--down mono">▼ Worst in U.S.</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">36.5%</span>
+              <span class="stat-unit">downtown CBD vacancy, Q1 2026</span>
+            </div>
+            <svg class="spark" viewBox="0 0 320 80" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="sparkA" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,68 L40,66 L80,60 L120,48 L160,38 L200,28 L240,22 L280,14 L320,8 L320,80 L0,80 Z" fill="url(#sparkA)"/>
+              <path d="M0,68 L40,66 L80,60 L120,48 L160,38 L200,28 L240,22 L280,14 L320,8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+              <g class="spark-axis">
+                <text x="0" y="78" class="spark-lbl">2019</text>
+                <text x="160" y="78" class="spark-lbl" text-anchor="middle">'22</text>
+                <text x="320" y="78" class="spark-lbl" text-anchor="end">Q1 '26</text>
+              </g>
+            </svg>
+            <p class="stat-foot">Up from 33% a year ago. Roughly 5× the pre-pandemic level. <cite>Cushman &amp; Wakefield Q1 2026</cite></p>
+          </article>
+
+          <article class="stat-card">
+            <header class="stat-head">
+              <span class="stat-tag mono">Skyscraper value</span>
+              <span class="stat-trend stat-trend--down mono">▼ −50% to −62%</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">$3.7B</span>
+              <span class="stat-unit">value lost from top towers since 2022</span>
+            </div>
+            <ul class="bar-stack" aria-label="Tower value lost">
+              <li><span class="bar-lbl">Amazon Doppler</span><span class="bar"><span class="bar-fill" style="--w:62%"></span></span><span class="bar-num">−62%</span></li>
+              <li><span class="bar-lbl">Amazon Day 1</span><span class="bar"><span class="bar-fill" style="--w:59%"></span></span><span class="bar-num">−59%</span></li>
+              <li><span class="bar-lbl">Top 10 avg</span><span class="bar"><span class="bar-fill" style="--w:50%"></span></span><span class="bar-num">−50%</span></li>
+            </ul>
+            <p class="stat-foot"><cite>King County Assessor · 2022–2025</cite></p>
+          </article>
+
+          <article class="stat-card">
+            <header class="stat-head">
+              <span class="stat-tag mono">Jobs</span>
+              <span class="stat-trend stat-trend--down mono">▼ Worst since COVID</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">−13,000</span>
+              <span class="stat-unit">downtown jobs lost in 2025</span>
+            </div>
+            <p class="stat-body">Amazon is moving 10,000 jobs to Bellevue. Worker foot traffic in March 2026 sat at 60% of March 2019, and fell another 6% year over year.</p>
+            <p class="stat-foot"><cite>Downtown Seattle Association · 2026</cite></p>
+          </article>
+
+          <article class="stat-card">
+            <header class="stat-head">
+              <span class="stat-tag mono">Small business</span>
+              <span class="stat-trend stat-trend--down mono">▼ Pandemic-grade</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">67%</span>
+              <span class="stat-unit">of Seattle businesses report more strain than during COVID</span>
+            </div>
+            <ul class="bar-stack" aria-label="Owner self-report">
+              <li><span class="bar-lbl">Fewer customers</span><span class="bar"><span class="bar-fill" style="--w:71%"></span></span><span class="bar-num">71%</span></li>
+              <li><span class="bar-lbl">Sales down YoY</span><span class="bar"><span class="bar-fill" style="--w:63%"></span></span><span class="bar-num">63%</span></li>
+              <li><span class="bar-lbl">Crime hurting them</span><span class="bar"><span class="bar-fill" style="--w:50%"></span></span><span class="bar-num">~50%</span></li>
+            </ul>
+            <p class="stat-foot"><cite>The Intentionalist · January 2026 (n=136)</cite></p>
+          </article>
+
+          <article class="stat-card stat-card--lg stat-card--rank">
+            <header class="stat-head">
+              <span class="stat-tag mono">State business climate</span>
+              <span class="stat-trend stat-trend--down mono">▼ −39 spots since 2014</span>
+            </header>
+            <div class="rank-row">
+              <div class="rank-item">
+                <span class="rank-label mono">Tax Foundation 2026</span>
+                <span class="rank-num"><b>45</b><span class="rank-of">/50</span></span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-label mono">Chief Executive 2026</span>
+                <span class="rank-num"><b>47</b><span class="rank-of">/50</span></span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-label mono">Was, in 2014</span>
+                <span class="rank-num rank-then"><b>6</b><span class="rank-of">/50</span></span>
+              </div>
+            </div>
+            <p class="stat-body">A decade ago, top 10 in the country. Now bottom 5. That's not bad luck. That's policy: gross-receipts B&amp;O tax, new capital gains tax, expanded UI for striking workers, the highest combined sales tax of any large U.S. city.</p>
+          </article>
+
+          <article class="stat-card">
+            <header class="stat-head">
+              <span class="stat-tag mono">Public safety</span>
+              <span class="stat-trend stat-trend--down mono">▼ 2.5× normal</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">2.5×</span>
+              <span class="stat-unit">King County felony retail theft caseload, early 2025</span>
+            </div>
+            <p class="stat-body">The governor's response was to veto funding for the program built to fight it. <span class="redact">The system isn't broken; it's responding to incentives.</span></p>
+          </article>
+
+          <article class="stat-card">
+            <header class="stat-head">
+              <span class="stat-tag mono">New business formation</span>
+              <span class="stat-trend stat-trend--down mono">▼ −40% vs. 2019</span>
+            </header>
+            <div class="stat-figure">
+              <span class="stat-num">−19.2%</span>
+              <span class="stat-unit">new Seattle business licenses, April 2026 vs. April 2025</span>
+            </div>
+            <p class="stat-body">2,221 new licenses in the first 110 days of 2026. Down 12.4% from 2025 and down 40% from 2019. The pipeline is drying up.</p>
+          </article>
+
+        </div>
+
+        <p class="diag-cta mono small">
+          We can read the data. We can also do something about it. → <a href="#why">Why this exists</a>
+        </p>
       </div>
     </section>
 
@@ -132,11 +348,81 @@
               Seattle's progressive organizations have built formidable political infrastructure: coordinated candidate pipelines, disproportionately influential media, advocacy machines that consistently shape who gets elected and what gets done.
             </p>
             <p>
-              Pragmatic, middle-of-the-road voices, the broad center of Seattle's electorate, have nothing comparable. Civic groups and business associations work in silos. Candidates who support evidence-based policy run without sustained institutional backing. The other side doesn't just win elections; it has built the permanent infrastructure that makes winning routine, at the ballot box and at the dais.
+              Pragmatic, middle-of-the-road voices, the broad center of Seattle's electorate, have nothing comparable. Civic groups and business associations work in silos. Candidates who support evidence-based policy run without sustained institutional backing.
             </p>
-            <p class="emphasis">
-              <span data-brand-name>SeaFor</span> is the infrastructure play. Not a campaign vehicle with better branding. Not a one-cycle committee that disappears after November. A durable, moderate, pro-governance operating system designed to outlast any single election.
+            <p>
+              The other side doesn't just win elections. It has built the permanent infrastructure that makes winning routine, at the ballot box and at the dais. Until the pragmatic center builds something equivalent, the cycle keeps repeating: a moderate gets elected on a wave, governs alone, and gets picked off in the next primary. The infrastructure deficit is the problem.
             </p>
+          </div>
+        </div>
+
+        <div class="why-isnt">
+          <div class="isnt-row">
+            <span class="isnt-tag isnt-tag--no">Not</span>
+            <p>another campaign committee that disappears after November.</p>
+          </div>
+          <div class="isnt-row">
+            <span class="isnt-tag isnt-tag--no">Not</span>
+            <p>a rebrand of an existing org with a fresh logo and the same instincts.</p>
+          </div>
+          <div class="isnt-row">
+            <span class="isnt-tag isnt-tag--no">Not</span>
+            <p>a vehicle for any one candidate, faction, or business interest.</p>
+          </div>
+          <div class="isnt-row isnt-row--is">
+            <span class="isnt-tag isnt-tag--yes">Is</span>
+            <p>permanent civic infrastructure for the pragmatic center. Built to outlast every cycle.</p>
+          </div>
+        </div>
+
+        <p class="why-emphasis">
+          <span data-brand-name>SeaFor</span> is the infrastructure play. Not a campaign vehicle with better branding. Not a one-cycle committee that disappears after November. A durable, moderate, pro-governance operating system designed to outlast any single election.
+        </p>
+      </div>
+    </section>
+
+    <!-- MOMENTUM BAND -->
+    <section class="momentum reveal" aria-labelledby="momentum-h">
+      <div class="momentum-photo" aria-hidden="true">
+        <img src="img/spheres1.jpg" alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="momentum-inner">
+        <div class="container">
+          <span class="momentum-eyebrow"><span class="pulse-dot"></span> Status · Ramping fast · May 2026</span>
+          <h2 id="momentum-h" class="momentum-h2">
+            We're moving at the pace this city <em>actually requires</em>.
+          </h2>
+          <p class="momentum-deck">
+            Founders form once. The window to be in early closes when the cycle starts. Here's what's already in motion, what's live this month, and what ships before the D5 race opens.
+          </p>
+
+          <div class="shipping-grid">
+            <article class="shipping-item">
+              <div class="ship-date"><span class="ship-status ship-status--done">DONE</span> Apr 2026</div>
+              <h4>501(c)(4) entity stood up</h4>
+              <p>Adult legal review. Affiliated PAC and IE structures scoped, with a clean firewall.</p>
+            </article>
+            <article class="shipping-item">
+              <div class="ship-date"><span class="ship-status ship-status--done">DONE</span> Apr 2026</div>
+              <h4>Founding circle conversations</h4>
+              <p>First quiet rounds underway. Three to five badasses, not fifteen validators.</p>
+            </article>
+            <article class="shipping-item">
+              <div class="ship-date"><span class="ship-status ship-status--live">LIVE</span> May 2026</div>
+              <h4>City Hall tracker · v0</h4>
+              <p>Plain-English readout of every Council vote. Spin vs. reality. Public, free, weekly.</p>
+            </article>
+            <article class="shipping-item">
+              <div class="ship-date"><span class="ship-status ship-status--next">NEXT</span> Q3 2026</div>
+              <h4>D5 candidate diligence</h4>
+              <p>Recruitment short list. Public coalition launch. The 2027 deployment plan locked.</p>
+            </article>
+          </div>
+
+          <div class="momentum-meta">
+            <span><b>Cadence:</b> Weekly tracker · Monthly memo · Quarterly donor letter</span>
+            <span><b>Founding circle:</b> Open until Q3</span>
+            <span><b>First product live:</b> This month</span>
           </div>
         </div>
       </div>
@@ -153,34 +439,242 @@
         <h2 class="display-2 work-title">
           Five workstreams. Built to <em>actually ship</em>.
         </h2>
+        <p class="work-deck">
+          Five things every civic group claims to do. Here's what we do differently in each, and what "better" actually means in practice. No mission statements. Just the work.
+        </p>
 
         <ol class="work-grid" role="list">
+
           <li class="work-card work-card--lg">
             <div class="card-num mono">01</div>
             <h3>Public education &amp; narrative change</h3>
-            <p>Tracking City Hall in plain English. Fair, nuanced, deep. The kind of policy reporting Seattle's existing media landscape has stopped doing. Plus credible, data-based content for younger and underrepresented voters where they actually are.</p>
+            <p class="work-lede">Tracking City Hall in plain English. Fair, nuanced, deep. The kind of policy reporting Seattle's existing media landscape has stopped doing.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>One reporter at <cite>The Seattle Times</cite> covering all of City Hall. Stranger longreads three weeks after the vote. Op-eds on Substack that 400 people read. Most voters learn what Council did from a TikTok with the wrong dollar figure.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>A daily newsroom for City Hall. Plain-English readouts the same day a vote happens, sourced and linked. Spanish, Vietnamese, and Mandarin from day one. Receipts every time someone says "historic investment" without a number behind it.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Council Tracker.</b> Every bill, vote, and amendment, indexed and searchable.</li>
+              <li><b>Spin vs. Reality.</b> Weekly side-by-side of press release vs. fiscal note vs. SEEC filing.</li>
+              <li><b>Short-form video</b> in the formats voters under 40 actually watch, with sources in the caption.</li>
+              <li><b>The Brief.</b> A 5-minute weekly readout on what changed at City Hall and what's coming.</li>
+            </ul>
           </li>
+
           <li class="work-card">
             <div class="card-num mono">02</div>
             <h3>Candidate recruitment &amp; electoral support</h3>
-            <p>Identify, recruit, and develop pragmatic Council candidates. Sustained institutional backing through affiliated PAC and IE structures, with a clean firewall and adult legal review.</p>
+            <p class="work-lede">Identify, recruit, and develop pragmatic candidates. Sustained backing through affiliated PAC and IE structures with a clean firewall and adult legal review.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>A consultant calls a friend in March of an election year. The candidate is a small business owner with no comms shop, no opposition research, and a website built in a weekend. By July they're on defense. By November they've lost.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>A 24-month bench-building program. We meet candidates two cycles before they need us. Training, vetting, narrative work, and credible institutional support that doesn't disappear when the cycle gets ugly.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Bench pipeline.</b> 25-40 vetted prospects across districts, refreshed quarterly.</li>
+              <li><b>Candidate bootcamp.</b> Comms, fundraising, voter file, opposition research, debate prep.</li>
+              <li><b>Affiliated PAC + IE</b> with proper firewalls, public reporting, and outside legal review.</li>
+              <li><b>Air cover that doesn't fold.</b> Funded through the cycle, not until the first bad poll.</li>
+            </ul>
           </li>
+
           <li class="work-card">
             <div class="card-num mono">03</div>
             <h3>Policy oversight</h3>
-            <p>Real analysis on public safety, homelessness, housing, permitting, and land use. Public support for the good-governance moves sitting electeds are already trying to make.</p>
+            <p class="work-lede">Real analysis on public safety, homelessness, housing, permitting, and land use. Plus public air cover for the good-governance moves sitting electeds are already trying to make.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>Think tanks publish a 60-page PDF six months after the decision. Advocacy groups put out a one-pager that's 90% adjective. Nobody reads either. Council staff write the actual policy alone, with whatever evidence base they had time to gather on a Tuesday.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>Issue briefs that arrive before the committee meeting, not after. Real numbers, real comparisons, real tradeoffs. Written so a Councilmember can actually use them and a voter can actually understand them.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Permitting &amp; housing.</b> Time-to-permit benchmarks vs. peer cities, line-item delays, what to fix first.</li>
+              <li><b>Public safety.</b> Staffing math, response times, alternate-response programs, what's working and what isn't.</li>
+              <li><b>Homelessness response.</b> Per-bed costs, throughput data, KCRHA accountability instead of vibes.</li>
+              <li><b>Budget readouts</b> that follow the dollar from press release to ordinance to actual outcome.</li>
+            </ul>
           </li>
+
           <li class="work-card">
             <div class="card-num mono">04</div>
             <h3>Coalition building</h3>
-            <p>Investing in the ecosystem: civic orgs, trade associations, neighborhood groups, and individual voters who are tired of working in silos. Issue alignment, not a shadow campaign HQ.</p>
+            <p class="work-lede">Investing in the ecosystem: civic orgs, trade associations, neighborhood groups, and individual voters who are tired of working in silos. Issue alignment, not a shadow campaign HQ.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>Five orgs sending five different lobbyists to argue the same point at the same hearing. Letters with 200 signatures and zero follow-through. Coalitions that exist for one press conference and dissolve before the next vote.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>A standing back-office for civic groups that already agree on 80% of issues. Shared data, shared comms, shared timelines, shared turnout. We do the unglamorous coordination work nobody else funds.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Standing coalition table</b> with clear decision rules, not a 40-person email chain.</li>
+              <li><b>Shared infrastructure.</b> Voter file access, polling, comms tools, legal review.</li>
+              <li><b>Joint campaigns.</b> One message, one calendar, one set of receipts across partners.</li>
+              <li><b>Member orgs that don't lose autonomy.</b> Coordination without absorption. They keep their brand, their board, their lane.</li>
+            </ul>
           </li>
+
           <li class="work-card">
             <div class="card-num mono">05</div>
             <h3>Civic events</h3>
-            <p>Forums, panels, and conversations that put Seattleites in the same room as the people running their city. The rare event where the policy is sharper than the catering.</p>
+            <p class="work-lede">Forums, panels, and conversations that put Seattleites in the same room as the people running their city. The rare event where the policy is sharper than the catering.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>Town halls where four people on a panel agree with each other for 90 minutes and the audience is mostly campaign staff. Fundraisers with a printed program and zero new information. Networking events where the actual decision-makers leave at the salad course.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>On-record conversations with the people actually moving policy. Real disagreement on stage. Voters and electeds in the same room. Transcripts, video, and a follow-up brief published within 48 hours so the conversation doesn't end at the door.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Quarterly policy forums.</b> One issue, two hours, electeds plus operators who actually run the system.</li>
+              <li><b>Candidate accountability nights</b> with prepared questions and follow-ups, not softballs.</li>
+              <li><b>Founders &amp; donors briefings</b> where the people writing checks meet the people drafting the policy.</li>
+              <li><b>Every event recorded, transcribed, and indexed.</b> If it wasn't on the record, it didn't happen.</li>
+            </ul>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- HOW WE'RE DIFFERENT - AI velocity -->
+    <section class="section section-edge" id="edge">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ 03 · How we're different</span>
+        </div>
+
+        <div class="edge-grid">
+          <div class="edge-text">
+            <h2 class="display-2">
+              Built like a <em>product team</em>,<br/>
+              not a 1990s nonprofit.
+            </h2>
+            <p class="lede">
+              Most civic groups still write a memo on Monday and publish it three weeks later. We don't. <span data-brand-name>SeaFor</span> uses modern AI tooling end-to-end: agenda monitoring, vote analysis, drafting, fact-checking, design, and distribution all run on the same operating system, in hours instead of weeks.
+            </p>
+            <ul class="edge-points">
+              <li>
+                <span class="edge-icon mono">01</span>
+                <div>
+                  <h4>Always-on agenda intelligence</h4>
+                  <p>Every Council agenda, amendment, and roll-call vote is parsed the moment it posts. Nothing buried in a 47-tab packet stays buried.</p>
+                </div>
+              </li>
+              <li>
+                <span class="edge-icon mono">02</span>
+                <div>
+                  <h4>Hours, not weeks</h4>
+                  <p>Plain-English readouts, social cards, op-ed drafts, and donor briefs ship the same day a vote happens. The other side's narrative doesn't get a 21-day head start.</p>
+                </div>
+              </li>
+              <li>
+                <span class="edge-icon mono">03</span>
+                <div>
+                  <h4>Adults still review everything</h4>
+                  <p>AI is the engine, not the editor. Every public artifact is reviewed, fact-checked, and signed off by a human before it ships. No hallucinations, no slop, no apologies.</p>
+                </div>
+              </li>
+              <li>
+                <span class="edge-icon mono">04</span>
+                <div>
+                  <h4>Lean by design</h4>
+                  <p>Three to five people doing the work of thirty. Donor dollars buy reach and rigor, not headcount and rent.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="edge-art" aria-label="SeaFor publishing pipeline">
+            <div class="console">
+              <header class="console-head">
+                <span class="dot dot--r"></span>
+                <span class="dot dot--y"></span>
+                <span class="dot dot--g"></span>
+                <span class="console-title mono">seafor / pipeline.live</span>
+                <span class="console-status mono"><span class="pulse-dot"></span> ONLINE</span>
+              </header>
+              <div class="console-body">
+                <div class="step done">
+                  <span class="t mono">09:02</span>
+                  <span class="src mono">SRC</span>
+                  <span class="msg">Council agenda v3 posted · 12 items, 4 amendments</span>
+                  <span class="badge ok mono">PARSED</span>
+                </div>
+                <div class="step done">
+                  <span class="t mono">09:04</span>
+                  <span class="src mono">AI</span>
+                  <span class="msg">Plain-English summary drafted · 3 spin flags raised</span>
+                  <span class="badge ok mono">DRAFTED</span>
+                </div>
+                <div class="step done">
+                  <span class="t mono">09:18</span>
+                  <span class="src mono">FACT</span>
+                  <span class="msg">Cross-checked claims vs. SEEC filings &amp; budget data</span>
+                  <span class="badge ok mono">VERIFIED</span>
+                </div>
+                <div class="step active">
+                  <span class="t mono">09:31</span>
+                  <span class="src mono">EDIT</span>
+                  <span class="msg">Human review · sign-off pending</span>
+                  <span class="badge live mono"><span class="pulse-dot"></span> REVIEW</span>
+                </div>
+                <div class="step queued">
+                  <span class="t mono">09:45</span>
+                  <span class="src mono">SHIP</span>
+                  <span class="msg">Tracker post + social cards + donor brief</span>
+                  <span class="badge q mono">QUEUED</span>
+                </div>
+                <div class="step queued">
+                  <span class="t mono">10:30</span>
+                  <span class="src mono">DIST</span>
+                  <span class="msg">Newsletter, X thread, op-ed pitch</span>
+                  <span class="badge q mono">QUEUED</span>
+                </div>
+              </div>
+              <footer class="console-foot mono">
+                <span>Today · 6 votes · 4 published · 0 corrections</span>
+                <span class="console-runtime">Median lead time · <b>1h 28m</b></span>
+              </footer>
+            </div>
+
+            <div class="vs-strip" aria-label="Velocity comparison">
+              <div class="vs-row vs-row--them">
+                <span class="vs-label mono">Legacy advocacy</span>
+                <span class="vs-bar"><span class="vs-fill" style="--w:96%"></span></span>
+                <span class="vs-num mono">~21 days</span>
+              </div>
+              <div class="vs-row vs-row--us">
+                <span class="vs-label mono">SeaFor pipeline</span>
+                <span class="vs-bar"><span class="vs-fill vs-fill--accent" style="--w:7%"></span></span>
+                <span class="vs-num mono">~90 minutes</span>
+              </div>
+              <p class="vs-foot mono">Council vote → public, fact-checked artifact</p>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -189,7 +683,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 03 · The immediate opportunity</span>
+          <span class="section-kicker mono uppercase small">§ 04 · The immediate opportunity</span>
         </div>
 
         <div class="opp-grid">
@@ -233,7 +727,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 04 · Flagship product preview</span>
+          <span class="section-kicker mono uppercase small">§ 05 · Flagship product preview</span>
         </div>
 
         <div class="tracker-intro">
@@ -307,7 +801,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 05 · Why support this now</span>
+          <span class="section-kicker mono uppercase small">§ 06 · Why support this now</span>
         </div>
 
         <div class="support-grid">
@@ -348,7 +842,7 @@
         </div>
 
         <blockquote class="pullquote">
-          <p>"Three to five killers beats fifteen validators. A decorative board slows decisions, leaks strategy, and gives everyone veto power without responsibility."</p>
+          <p>"Three to five badasses beats fifteen validators. A decorative board slows decisions, leaks strategy, and gives everyone veto power without responsibility."</p>
           <cite class="mono small">Internal note · Founding circle</cite>
         </blockquote>
       </div>
@@ -358,7 +852,7 @@
     <section class="section section-contact" id="contact">
       <div class="container contact-row">
         <div class="contact-left">
-          <span class="section-kicker mono uppercase small">§ 06 · Talk to us</span>
+          <span class="section-kicker mono uppercase small">§ 07 · Talk to us</span>
           <h2 class="display-1">
             Serious supporters,<br/>aligned orgs, founding circle.
           </h2>
@@ -368,7 +862,7 @@
         </div>
 
         <div class="contact-right">
-          <a class="contact-cta" href="#" data-brand-mailto>
+          <a class="contact-cta" href="./contact.html">
             <span class="mono small uppercase">Founders · direct line</span>
             <span class="contact-email" data-brand-email>founders@seafor.org</span>
             <span class="contact-arrow" aria-hidden="true">→</span>
@@ -380,6 +874,8 @@
             <li><span class="cl-key">First test</span><span class="cl-val">2026 · District 5</span></li>
             <li><span class="cl-key">Counsel</span><span class="cl-val">Engaged</span></li>
           </ul>
+
+          <a class="btn btn-link" href="./contact.html">Open the full contact page <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>

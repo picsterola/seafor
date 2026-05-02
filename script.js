@@ -1,4 +1,4 @@
-/* SeaFor — minimal client behavior. No localStorage. No tracking. */
+/* SeaFor: minimal client behavior. No persistent storage. No tracking. */
 
 (function () {
   // --- Brand swap: a single source of truth driven by window.BRAND -------------
@@ -100,4 +100,56 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
+})();
+
+/* Contact page: form handling (graceful, no backend) */
+(function () {
+  var form = document.getElementById('ctaForm');
+  if (!form) return;
+  var status = document.getElementById('formStatus');
+  var brand = window.BRAND || {};
+  var to = brand.contactEmail || 'founders@seafor.org';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.classList.remove('is-success', 'is-error');
+
+    var data = new FormData(form);
+    var name = (data.get('name') || '').toString().trim();
+    var email = (data.get('email') || '').toString().trim();
+
+    if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      status.textContent = 'Add your name and a real email and try again.';
+      status.classList.add('is-error');
+      return;
+    }
+
+    var role = (data.get('role') || 'unspecified').toString();
+    var affiliation = (data.get('affiliation') || '').toString().trim();
+    var phone = (data.get('phone') || '').toString().trim();
+    var message = (data.get('message') || '').toString().trim();
+    var discreet = data.get('discreet') ? 'Yes' : 'No';
+
+    var subject = 'SeaFor inquiry · ' + role + ' · ' + name;
+    var body = [
+      'Name: ' + name,
+      'Email: ' + email,
+      affiliation ? 'Affiliation: ' + affiliation : null,
+      phone ? 'Phone: ' + phone : null,
+      'Role: ' + role,
+      'Discreet: ' + discreet,
+      '',
+      message || '(no message)'
+    ].filter(Boolean).join('\n');
+
+    var href = 'mailto:' + to +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+
+    // Open the user's mail client. The site stays static, no third party.
+    window.location.href = href;
+
+    status.textContent = "Opening your email client. If nothing happens, write to " + to + " directly.";
+    status.classList.add('is-success');
+  });
 })();
