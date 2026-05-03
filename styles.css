@@ -2783,3 +2783,244 @@ p { margin: 0 0 1em; }
 [data-theme="dark"] .console--newsroom .step .t { color: var(--accent-2-ink); }
 .console--newsroom .step.active .t { color: var(--accent); }
 [data-theme="dark"] .console--newsroom .step.active .t { color: var(--accent-ink, var(--accent)); }
+
+/* ==========================================================================
+   Section 03 — Agent ops: aggregator roster + auto-brief
+   ========================================================================== */
+
+.agg-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(242,239,230,0.12);
+}
+.agg-roster {
+  padding: 14px 14px 16px;
+  border-right: 1px solid rgba(242,239,230,0.12);
+  background: rgba(242,239,230,0.02);
+}
+.agg-roster-head {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: rgba(242,239,230,0.5);
+  margin: 0 0 10px;
+}
+.agg-roster-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.agg-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.agg-av {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--c, #0070A8);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.agg-av--sm {
+  width: 20px;
+  height: 20px;
+  font-size: 9px;
+}
+.agg-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.agg-name {
+  font-size: 13px;
+  color: rgba(242,239,230,0.92);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agg-role {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: rgba(242,239,230,0.45);
+}
+.agg-status {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: rgba(242,239,230,0.55);
+}
+.agg-pulse {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: #66C28E;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.agg-pulse .pulse-dot { background: #66C28E; box-shadow: 0 0 0 0 rgba(102,194,142,0.7); }
+
+.agg-brief {
+  padding: 16px 18px 18px;
+  background: rgba(255,90,63,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.agg-brief-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.agg-brief-tag {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #FF866F;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.agg-brief-tag .pulse-dot { background: #FF5A3F; box-shadow: 0 0 0 0 rgba(255,90,63,0.7); }
+.agg-brief-id {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(242,239,230,0.45);
+}
+.agg-brief-title {
+  font-family: var(--sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #F2EFE6;
+  margin: 0;
+}
+.agg-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px dashed rgba(242,239,230,0.14);
+  border-bottom: 1px dashed rgba(242,239,230,0.14);
+}
+.agg-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.agg-stat-num {
+  font-family: var(--serif, var(--sans));
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #F2EFE6;
+  font-variant-numeric: tabular-nums;
+}
+.agg-stat-lbl {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: rgba(242,239,230,0.5);
+}
+.agg-spark {
+  width: 100%;
+  height: 56px;
+  display: block;
+}
+.agg-spark-cap {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: rgba(242,239,230,0.55);
+  margin-top: -6px;
+}
+.agg-angle {
+  background: rgba(242,239,230,0.04);
+  border-left: 2px solid #FF5A3F;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.agg-angle-lbl {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: #FF866F;
+}
+.agg-angle p {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(242,239,230,0.88);
+  margin: 0;
+}
+.agg-dispatch {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.agg-dispatch-lbl {
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: rgba(242,239,230,0.5);
+  margin-right: 2px;
+}
+.agg-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 4px;
+  background: rgba(242,239,230,0.06);
+  border: 1px solid rgba(242,239,230,0.14);
+  border-radius: 999px;
+  font-size: 11.5px;
+  color: rgba(242,239,230,0.92);
+}
+
+/* Speed strip header */
+.vs-head {
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--rule);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+}
+
+/* Responsive: stack roster + brief */
+@media (max-width: 720px) {
+  .agg-grid { grid-template-columns: 1fr; }
+  .agg-roster {
+    border-right: 0;
+    border-bottom: 1px solid rgba(242,239,230,0.12);
+  }
+  .agg-roster-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .agg-row {
+    grid-template-columns: 28px auto;
+    gap: 8px;
+  }
+  .agg-row .agg-status,
+  .agg-row .agg-pulse { display: none; }
+  .agg-stat-row { grid-template-columns: repeat(3, 1fr); }
+  .agg-stat-num { font-size: 17px; }
+}
+
+/* Section 03: console got tall (roster + brief). Don't sticky-pin it. */
+.console--newsroom { position: static; top: auto; }
