@@ -534,7 +534,7 @@ p { margin: 0 0 1em; }
   margin-bottom: 56px;
 }
 .opp-text p { color: var(--fg-2); max-width: 60ch; }
-.year { font-style: italic; color: var(--fg-2); }
+.year { font-style: italic; color: var(--fg-2); margin-right: 0.12em; }
 .year.accent { color: var(--accent); }
 
 .plate {
@@ -698,6 +698,10 @@ p { margin: 0 0 1em; }
 .tc-tag--passed  { color: #2E6F45; border-color: #2E6F45; background: rgba(46,111,69,.08); }
 .tc-tag--stalled { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 .tc-tag--spin    { color: #6A4F00; border-color: #6A4F00; background: rgba(242,209,74,.18); }
+.tc-tag--introduced { color: #1F5BAA; border-color: #1F5BAA; background: rgba(31,91,170,.10); }
+.tc-placeholder { margin-top: 6px; opacity: .65; font-style: italic; }
+.nobr { white-space: nowrap; }
+[data-theme="dark"] .tc-tag--introduced { color: #6FA8E2; border-color: #6FA8E2; background: rgba(111,168,226,.12); }
 
 [data-theme="dark"] .tc-tag--passed  { color: #6FCB94; border-color: #6FCB94; background: rgba(111,203,148,.10); }
 [data-theme="dark"] .tc-tag--spin    { color: var(--highlight); border-color: var(--highlight); background: rgba(242,209,74,.10); }
@@ -1792,6 +1796,69 @@ p { margin: 0 0 1em; }
   text-transform: uppercase;
 }
 .stat-trend--down { color: var(--accent); }
+.stat-trend--up-bad { color: var(--accent); }
+
+/* === Sara's spending vs outcomes charts === */
+.diag-subhead {
+  margin: 56px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.diag-subhead .rule { width: 64px; height: 2px; background: var(--fg); opacity: .9; }
+.diag-h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.18;
+  letter-spacing: -0.005em;
+  color: var(--fg);
+  max-width: 56ch;
+  margin: 4px 0 0;
+}
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+.chart-card .stat-figure { margin-bottom: 8px; }
+.chart-card .stat-num { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1; }
+.chart {
+  margin: 12px 0 0;
+  padding: 0;
+}
+.chart svg { width: 100%; height: auto; display: block; max-height: 260px; }
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+  font-size: 10.5px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.chart-legend .swatch {
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin-right: 6px;
+  vertical-align: -1px;
+  border-radius: 2px;
+}
+/* chart palette - light theme */
+:root {
+  --chart-levy:  #1f5f3a;  /* deep green */
+  --chart-pet:   #6dbf86;  /* mid green */
+  --chart-mha:   #d3826a;  /* warm red-clay */
+  --chart-other: #c8b88a;  /* tan */
+}
+[data-theme="dark"] {
+  --chart-levy:  #4f9b6a;
+  --chart-pet:   #8cd6a3;
+  --chart-mha:   #e89a82;
+  --chart-other: #d8c89a;
+}
 
 .stat-figure {
   display: flex;
