@@ -317,7 +317,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-2);
-  margin: 22px 0 0;
+  margin: 22px 0 32px;
   padding-left: 14px;
   border-left: 2px solid var(--accent-2);
   max-width: 60ch;
