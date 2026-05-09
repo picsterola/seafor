@@ -2358,11 +2358,12 @@ p { margin: 0 0 1em; }
   gap: 8px;
 }
 .work-deliv-head {
-  margin: 14px 0 0;
+  margin: 18px 0 10px;
   letter-spacing: 0.14em;
   color: var(--fg-3);
   font-weight: 600;
 }
+.work-deliv-head + .work-deliv { margin-top: 0 !important; }
 .work-deliv li {
   position: relative;
   padding-left: 20px;
