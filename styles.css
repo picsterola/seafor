@@ -2357,6 +2357,12 @@ p { margin: 0 0 1em; }
   display: grid;
   gap: 8px;
 }
+.work-deliv-head {
+  margin: 14px 0 0;
+  letter-spacing: 0.14em;
+  color: var(--fg-3);
+  font-weight: 600;
+}
 .work-deliv li {
   position: relative;
   padding-left: 20px;
