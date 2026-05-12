@@ -75,7 +75,6 @@
         <div class="hero-text">
         <div class="hero-meta">
           <span class="dispatch-tag"><span class="dot"></span> Dispatch № 001 · Seattle</span>
-          <span class="provisional">Working name. The brand can change. The argument can't.</span>
         </div>
 
         <h1 class="hero-headline">
@@ -86,6 +85,8 @@
         <p class="hero-deck">
           When the house is on fire, you don't call a plumber. <span data-brand-name>SeaFor</span> is a 501(c)(4) building the durable civic infrastructure for pragmatic, accountable governance: public education, policy oversight, and serious candidate support. Long game. Fast results. Fighting fire with fire.
         </p>
+
+        <p class="hero-wakeup">The <b>2025 election</b> is a <em>wake-up call</em>. <span data-brand-name>SeaFor</span> is the solution.</p>
 
         <p class="hero-tagline">Waging the pragmatic <em>counterinsurgency</em>, fueled by real-time information and giving a shit.</p>
 
@@ -102,87 +103,92 @@
         </aside>
         </div>
 
-        <!-- Hero artwork: editorial bulletin / tracker preview, all SVG -->
-        <figure class="hero-art hero-art--home" aria-hidden="true">
+        <!-- Hero artwork: 5-alarm bulletin. Editorial typography, fire/urgency motif. -->
+        <figure class="hero-art hero-art--home hero-art--alarm" aria-hidden="true">
           <svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <!-- Card -->
+            <defs>
+              <linearGradient id="alarmHeat" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%"  stop-color="var(--accent)" stop-opacity="0.85"/>
+                <stop offset="60%" stop-color="var(--accent)" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
+              </linearGradient>
+              <linearGradient id="alarmBar" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%"  stop-color="var(--accent)" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Paper card -->
             <rect x="20" y="40" width="440" height="500" rx="8" class="art-paper"/>
-            <!-- Top stripe (red / ink / grey) -->
-            <rect x="20" y="40" width="146" height="6" rx="3" fill="var(--accent)"/>
-            <rect x="166" y="40" width="148" height="6" fill="var(--fg)"/>
-            <rect x="314" y="40" width="146" height="6" rx="3" fill="var(--fg-3)"/>
 
-            <!-- Eyebrow -->
-            <text x="44" y="88" class="art-meta">VOL. 01 · NO. 14 · THIS WEEK</text>
+            <!-- Top alarm bar (solid accent) -->
+            <rect x="20" y="40" width="440" height="34" rx="8" fill="var(--accent)"/>
+            <rect x="20" y="60" width="440" height="14"  fill="var(--accent)"/>
+            <text x="40"  y="62" class="art-alarm-eyebrow">●  EMERGENCY DISPATCH · SEATTLE</text>
+            <text x="440" y="62" text-anchor="end" class="art-alarm-eyebrow">ALARM Nº 05</text>
 
-            <!-- Big title -->
-            <text x="44" y="138" class="art-h1">What Council</text>
-            <text x="44" y="178" class="art-h1">did this</text>
-            <text x="44" y="218" class="art-h1 art-h1--em">week.</text>
+            <!-- Headline -->
+            <text x="44" y="122" class="art-h1">The city is</text>
+            <text x="44" y="162" class="art-h1 art-h1--em">on fire.</text>
+            <text x="44" y="196" class="art-alarm-sub">A five-alarm policy emergency.</text>
 
-            <!-- Item 1: PASSED -->
-            <g transform="translate(44 248)">
-              <rect x="0" y="0" width="86" height="22" rx="11" fill="none" stroke="#2E6F45" stroke-width="1.5" class="art-tag-passed"/>
-              <text x="43" y="15" text-anchor="middle" class="art-tag-text art-tag-text--passed">PASSED</text>
-              <text x="104" y="15" class="art-item-title">Permitting reform · CB 120XYZ</text>
-              <g class="art-line">
-                <rect x="104" y="26" width="312" height="5" rx="2"/>
-                <rect x="104" y="38" width="260" height="5" rx="2"/>
+            <!-- Five alarm strips: progressively more red as alarms escalate -->
+            <g transform="translate(44 224)">
+              <text x="0" y="0" class="art-alarm-list-eyebrow">FIVE FIRES BURNING</text>
+
+              <!-- Row 1 -->
+              <g transform="translate(0 18)">
+                <text x="0"   y="14" class="art-alarm-num">01</text>
+                <text x="38"  y="14" class="art-alarm-item">Public safety · retreat &amp; deflect</text>
+                <rect x="0"   y="22" width="392" height="6" rx="3" fill="var(--accent)" fill-opacity="0.18"/>
+                <rect x="0"   y="22" width="118" height="6" rx="3" fill="url(#alarmBar)"/>
+              </g>
+              <!-- Row 2 -->
+              <g transform="translate(0 52)">
+                <text x="0"   y="14" class="art-alarm-num">02</text>
+                <text x="38"  y="14" class="art-alarm-item">Homelessness · spending up, results down</text>
+                <rect x="0"   y="22" width="392" height="6" rx="3" fill="var(--accent)" fill-opacity="0.18"/>
+                <rect x="0"   y="22" width="176" height="6" rx="3" fill="url(#alarmBar)"/>
+              </g>
+              <!-- Row 3 -->
+              <g transform="translate(0 86)">
+                <text x="0"   y="14" class="art-alarm-num">03</text>
+                <text x="38"  y="14" class="art-alarm-item">Business climate · worst in U.S.</text>
+                <rect x="0"   y="22" width="392" height="6" rx="3" fill="var(--accent)" fill-opacity="0.18"/>
+                <rect x="0"   y="22" width="248" height="6" rx="3" fill="url(#alarmBar)"/>
+              </g>
+              <!-- Row 4 -->
+              <g transform="translate(0 120)">
+                <text x="0"   y="14" class="art-alarm-num">04</text>
+                <text x="38"  y="14" class="art-alarm-item">Downtown vacancy · 36.5%</text>
+                <rect x="0"   y="22" width="392" height="6" rx="3" fill="var(--accent)" fill-opacity="0.18"/>
+                <rect x="0"   y="22" width="312" height="6" rx="3" fill="url(#alarmBar)"/>
+              </g>
+              <!-- Row 5 -->
+              <g transform="translate(0 154)">
+                <text x="0"   y="14" class="art-alarm-num">05</text>
+                <text x="38"  y="14" class="art-alarm-item">Opioid OD response calls · +217% since 2020</text>
+                <rect x="0"   y="22" width="392" height="6" rx="3" fill="var(--accent)" fill-opacity="0.18"/>
+                <rect x="0"   y="22" width="376" height="6" rx="3" fill="url(#alarmBar)"/>
               </g>
             </g>
 
-            <!-- Item 2: STALLED -->
-            <g transform="translate(44 320)">
-              <rect x="0" y="0" width="86" height="22" rx="11" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="43" y="15" text-anchor="middle" class="art-tag-text art-tag-text--stalled">STALLED</text>
-              <text x="104" y="15" class="art-item-title">Public safety package · Res 32XXX</text>
-              <g class="art-line">
-                <rect x="104" y="26" width="280" height="5" rx="2"/>
-                <rect x="104" y="38" width="230" height="5" rx="2"/>
-              </g>
-            </g>
+            <!-- Footer: response signal -->
+            <line x1="44" y1="452" x2="436" y2="452" class="art-rule"/>
+            <text x="44"  y="478" class="art-meta">RESPONSE · SEAFOR</text>
+            <text x="44"  y="498" class="art-alarm-cta">Fighting fire with fire.</text>
+            <text x="44"  y="518" class="art-meta art-meta--mute">DISPATCH Nº 001 · SEATTLE · 2026</text>
 
-            <!-- Item 3: SPIN -->
-            <g transform="translate(44 392)">
-              <rect x="0" y="0" width="118" height="22" rx="11" fill="#F2D14A" fill-opacity=".18" stroke="#6A4F00" stroke-width="1.2" class="art-tag-spin"/>
-              <text x="59" y="15" text-anchor="middle" class="art-tag-text art-tag-text--spin">SPIN VS. REALITY</text>
-              <text x="136" y="15" class="art-item-title art-item-title--quote">“Historic investment”</text>
-              <g class="art-line">
-                <rect x="136" y="26" width="264" height="5" rx="2"/>
-                <rect x="136" y="38" width="200" height="5" rx="2"/>
-              </g>
-            </g>
-
-            <!-- Footer rule + meta -->
-            <line x1="44" y1="472" x2="436" y2="472" class="art-rule"/>
-            <text x="44" y="498" class="art-meta">SOURCES · COUNCIL AGENDA · SEEC FILINGS</text>
-            <text x="44" y="514" class="art-meta art-meta--mute">PREVIEW · NOT YET LIVE</text>
-
-            <!-- Corner badge -->
-            <g transform="translate(384 100) rotate(8)">
-              <rect x="0" y="0" width="60" height="60" rx="30" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="30" y="28" text-anchor="middle" class="art-badge-top">SAMPLE</text>
-              <text x="30" y="44" text-anchor="middle" class="art-badge-bottom">Nº 14</text>
+            <!-- Corner stamp: WAKE UP -->
+            <g transform="translate(348 100) rotate(-8)">
+              <rect x="0" y="0" width="108" height="42" rx="4" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
+              <text x="54" y="19" text-anchor="middle" class="art-stamp-text">WAKE UP</text>
+              <text x="54" y="33" text-anchor="middle" class="art-stamp-sub">SEATTLE</text>
             </g>
           </svg>
         </figure>
       </div>
 
-      <!-- Marquee: editorial swagger, restrained color -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>What passed</span><span class="bullet">●</span>
-          <span>What stalled</span><span class="bullet">●</span>
-          <span>What changed</span><span class="bullet">●</span>
-          <span>Who voted for it</span><span class="bullet">●</span>
-          <span>Spin vs. reality</span><span class="bullet">●</span>
-          <span>What passed</span><span class="bullet">●</span>
-          <span>What stalled</span><span class="bullet">●</span>
-          <span>What changed</span><span class="bullet">●</span>
-          <span>Who voted for it</span><span class="bullet">●</span>
-          <span>Spin vs. reality</span><span class="bullet">●</span>
-        </div>
-      </div>
     </section>
 
     <!-- WHY (reordered above State of the city) -->
@@ -196,7 +202,7 @@
         <div class="why-grid">
           <h2 class="display-2">
             One side built <em>infrastructure</em>.<br/>
-            The other side <em>gave up</em>.
+            The other side gave to <em>one-off campaigns</em>.
           </h2>
 
           <div class="why-body">
@@ -211,6 +217,10 @@
             </p>
           </div>
         </div>
+
+        <p class="why-emphasis">
+          <span data-brand-name>SeaFor</span> is the infrastructure play. Not a campaign vehicle with better branding. Not a one-cycle committee that disappears after November. A durable, moderate, pro-governance operating system designed to outlast any single election. Changing Seattle's political culture for good.
+        </p>
 
         <div class="why-isnt">
           <div class="isnt-row">
@@ -230,10 +240,6 @@
             <p>permanent civic infrastructure for the pragmatic center. Built to outlast every cycle.</p>
           </div>
         </div>
-
-        <p class="why-emphasis">
-          <span data-brand-name>SeaFor</span> is the infrastructure play. Not a campaign vehicle with better branding. Not a one-cycle committee that disappears after November. A durable, moderate, pro-governance operating system designed to outlast any single election. Changing Seattle's political culture for good.
-        </p>
       </div>
     </section>
 
@@ -251,7 +257,7 @@
             It's a <em>structural problem</em>.
           </h2>
           <p class="diag-deck">
-            Seattle is objectively near the bottom of major U.S. cities on the metrics that matter to the people who live and work here. State and local policy choices made it this way, and those choices keep compounding. Numbers below are 2025–2026, sourced from CBRE, Cushman &amp; Wakefield, the Tax Foundation, Chief Executive, WalletHub, and the Downtown Seattle Association.
+            <b>We've seen the results.</b> Seattle is objectively near the bottom of major U.S. cities on the metrics that matter to the people who live and work here. State and local policy choices made it this way, and those choices keep compounding.
           </p>
         </div>
 
@@ -370,7 +376,8 @@
         <div class="diag-subhead">
           <span class="rule"></span>
           <span class="section-kicker mono uppercase small">Spending vs. outcomes</span>
-          <h3 class="diag-h3">Despite skyrocketing investments in affordable housing, homelessness continues to increase.</h3>
+          <h3 class="diag-h3">How much did it cost to get these results?</h3>
+          <p class="diag-subdeck">Despite skyrocketing investments in affordable housing, homelessness and overdoses continue to climb.</p>
         </div>
 
         <div class="chart-grid">
@@ -723,28 +730,6 @@
 
           <li class="work-card work-card--lg">
             <div class="card-num mono">01</div>
-            <h3>A weekly legislation tracker and call to action</h3>
-            <p class="work-lede">The fight happens in committee. We track legislation from committee to final Council vote so the public knows what's happening in real time, on public safety, homelessness, housing, taxes, and addiction, and can do something about it.</p>
-            <div class="work-vs">
-              <div class="vs-col vs-col--bad">
-                <span class="vs-tag">Status quo</span>
-                <p>Coverage repeats press release talking points and focuses on Full Council passage, missing the votes in committee where the real action happens. The only people who know how to influence it are paid lobbyists and activists.</p>
-              </div>
-              <div class="vs-col vs-col--good">
-                <span class="vs-tag vs-tag--us">SeaFor</span>
-                <p>Committee-first coverage with one-click action. Hot-topic legislation, down to the amendment: who's sponsoring it and what it does, then who voted for it. Take Mayor Wilson's bill to expand tiny home villages: amended by Council to require 24/7 security and sober living options. What goes in doesn't come out the same. We make it easy for the public to weigh in along the way.</p>
-              </div>
-            </div>
-            <ul class="work-deliv" role="list">
-              <li><b>Weekly committee digest.</b> What got introduced, amended in committee, and moved to final vote, in plain English.</li>
-              <li><b>Amendment receipts.</b> The text, the sponsor, the vote count, and what changed from the original.</li>
-              <li><b>Take action, in 30 seconds.</b> Email your Councilmember, post the receipts, pitch an op-ed. Pre-drafted, fully editable, sourced.</li>
-              <li><b>The Brief.</b> A 5-minute weekly readout on what moved at City Hall and what's coming next week.</li>
-            </ul>
-          </li>
-
-          <li class="work-card">
-            <div class="card-num mono">02</div>
             <h3>Counter-narrative and <span class="nobr">accountability journalism</span></h3>
             <p class="work-lede">Seattle's political press has a point of view, and it doesn't lean fiscally conservative. Bad policy gets a pass when nobody's keeping score. Someone has to follow the dollar and track the results to hold our electeds accountable. It isn't <em>The Stranger</em>.</p>
             <div class="work-vs">
@@ -768,7 +753,7 @@
           </li>
 
           <li class="work-card">
-            <div class="card-num mono">03</div>
+            <div class="card-num mono">02</div>
             <h3>Candidate recruitment &amp; electoral support</h3>
             <p class="work-lede">Identify, recruit, and develop pragmatic candidates. Sustained backing through affiliated PAC and IE structures with a clean firewall and adult legal review.</p>
             <div class="work-vs">
@@ -788,146 +773,29 @@
               <li><b>Air cover that doesn't fold.</b> Funded through the cycle, not until the first bad poll.</li>
             </ul>
           </li>
-        </ol>
-      </div>
-    </section>
 
-    <!-- HOW WE'RE DIFFERENT - AI velocity -->
-    <section class="section section-edge" id="edge">
-      <div class="container">
-        <div class="section-head">
-          <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 03 · How we're different</span>
-        </div>
-
-        <div class="edge-grid">
-          <div class="edge-text">
-            <h2 class="display-2">
-              Faster<br/>
-              than the <em>fire</em>.
-            </h2>
-            <p class="lede">
-              <span data-brand-name>SeaFor</span> is a response network, not a magazine. Agentic AI watches the city: every agenda, every amendment, every viral pile-on. It spots the policy arson in minutes, packages the receipts, and hands a brief to the sharpest pragmatic voices in town: writers, podcasters, wonks, operators. Humans bring the wit, the sources, the spine. The agents bring the speed.
-            </p>
-            <ul class="edge-points">
-              <li>
-                <span class="edge-icon mono">01</span>
-                <div>
-                  <h4>Agents that watch so you don't have to</h4>
-                  <p>A swarm of agents reads every Council packet, committee agenda, and breathless press release the moment it posts. The dumb takes get flagged. The genuinely arsonist policies get a full brief. Nothing slips past because someone took Friday off.</p>
-                </div>
-              </li>
-              <li>
-                <span class="edge-icon mono">02</span>
-                <div>
-                  <h4>Briefs in minutes, not Mondays</h4>
-                  <p>When a fire gets lit, agents pull the fiscal note, the SEEC filings, the prior votes, and the comparable cities. Out comes a brief with stats, a chart, a suggested angle, and the one paragraph that actually matters. Ready before the press release cools.</p>
-                </div>
-              </li>
-              <li>
-                <span class="edge-icon mono">03</span>
-                <div>
-                  <h4>An aggregator of pragmatic firepower</h4>
-                  <p>We don't pretend to be the only voice. We assemble the smartest center-pragmatic writers, podcasters, and operators in Seattle, then hand each of them the brief that fits their beat. Receipts get amplified across the whole network instead of dying in one Substack.</p>
-                </div>
-              </li>
-              <li>
-                <span class="edge-icon mono">04</span>
-                <div>
-                  <h4>Sharp humor, sourced facts, no slop</h4>
-                  <p>Agents draft. Humans verify, sharpen, and land the joke. Every chart, stat, and quote is checked against primary sources before it ships. The wit is loud. The footnotes are louder. Hallucinations get cut, not corrected.</p>
-                </div>
-              </li>
+          <li class="work-card">
+            <div class="card-num mono">03</div>
+            <h3>A weekly legislation tracker and call to action</h3>
+            <p class="work-lede">The fight happens in committee. We track legislation from committee to final Council vote so the public knows what's happening in real time, on public safety, homelessness, housing, taxes, and addiction, and can do something about it.</p>
+            <div class="work-vs">
+              <div class="vs-col vs-col--bad">
+                <span class="vs-tag">Status quo</span>
+                <p>Coverage repeats press release talking points and focuses on Full Council passage, missing the votes in committee where the real action happens. The only people who know how to influence it are paid lobbyists and activists.</p>
+              </div>
+              <div class="vs-col vs-col--good">
+                <span class="vs-tag vs-tag--us">SeaFor</span>
+                <p>Committee-first coverage with one-click action. Hot-topic legislation, down to the amendment: who's sponsoring it and what it does, then who voted for it. Take Mayor Wilson's bill to expand tiny home villages: amended by Council to require 24/7 security and sober living options. What goes in doesn't come out the same. We make it easy for the public to weigh in along the way.</p>
+              </div>
+            </div>
+            <ul class="work-deliv" role="list">
+              <li><b>Weekly committee digest.</b> What got introduced, amended in committee, and moved to final vote, in plain English.</li>
+              <li><b>Amendment receipts.</b> The text, the sponsor, the vote count, and what changed from the original.</li>
+              <li><b>Take action, in 30 seconds.</b> Email your Councilmember, post the receipts, pitch an op-ed. Pre-drafted, fully editable, sourced.</li>
+              <li><b>The Brief.</b> A 5-minute weekly readout on what moved at City Hall and what's coming next week.</li>
             </ul>
-          </div>
-
-          <aside class="edge-art" aria-label="SeaFor agent ops">
-            <div class="console console--newsroom">
-              <header class="console-head">
-                <span class="dot dot--r"></span>
-                <span class="dot dot--y"></span>
-                <span class="dot dot--g"></span>
-                <span class="console-title mono">seafor / agents.live</span>
-                <span class="console-status mono"><span class="pulse-dot"></span> AGENTS ONLINE</span>
-              </header>
-
-              <div class="agg-grid">
-                <div class="agg-roster" aria-label="Pragmatic voices on call">
-                  <div class="agg-roster-head mono">ON CALL · 12</div>
-                  <ul class="agg-roster-list">
-                    <li class="agg-row"><span class="agg-av" style="--c:#0070A8">EM</span><span class="agg-meta"><span class="agg-name">E. Mar</span><span class="agg-role mono">COLUMNIST</span></span><span class="agg-pulse mono"><span class="pulse-dot"></span>LIVE</span></li>
-                    <li class="agg-row"><span class="agg-av" style="--c:#D6321F">JK</span><span class="agg-meta"><span class="agg-name">J. Kwan</span><span class="agg-role mono">PODCAST</span></span><span class="agg-status mono">READY</span></li>
-                    <li class="agg-row"><span class="agg-av" style="--c:#0E2A55">RT</span><span class="agg-meta"><span class="agg-name">R. Thiel</span><span class="agg-role mono">WONK</span></span><span class="agg-status mono">READY</span></li>
-                    <li class="agg-row"><span class="agg-av" style="--c:#7C8AA8">SO</span><span class="agg-meta"><span class="agg-name">S. Olin</span><span class="agg-role mono">OPERATOR</span></span><span class="agg-status mono">DRAFT</span></li>
-                    <li class="agg-row"><span class="agg-av" style="--c:#0070A8">+8</span><span class="agg-meta"><span class="agg-name">8 more on call</span><span class="agg-role mono">NETWORK</span></span><span class="agg-status mono">IDLE</span></li>
-                  </ul>
-                </div>
-
-                <div class="agg-brief" aria-label="Auto-generated brief">
-                  <div class="agg-brief-head">
-                    <span class="agg-brief-tag mono"><span class="pulse-dot"></span>AUTO-BRIEF · 00:04:21 OLD</span>
-                    <span class="agg-brief-id mono">#FIRE-0427</span>
-                  </div>
-                  <h4 class="agg-brief-title">Wilson shelter amendments · buffer zone gutted</h4>
-                  <div class="agg-stat-row">
-                    <div class="agg-stat">
-                      <span class="agg-stat-num">$11.2M</span>
-                      <span class="agg-stat-lbl mono">FISCAL NOTE</span>
-                    </div>
-                    <div class="agg-stat">
-                      <span class="agg-stat-num">6&minus;3</span>
-                      <span class="agg-stat-lbl mono">COMMITTEE VOTE</span>
-                    </div>
-                    <div class="agg-stat">
-                      <span class="agg-stat-num">312ft</span>
-                      <span class="agg-stat-lbl mono">FROM SCHOOL</span>
-                    </div>
-                  </div>
-                  <svg class="agg-spark" viewBox="0 0 320 56" preserveAspectRatio="none" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="sparkFill" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="#FF5A3F" stop-opacity="0.35"/>
-                        <stop offset="100%" stop-color="#FF5A3F" stop-opacity="0"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0,46 L24,42 L48,40 L72,36 L96,32 L120,30 L144,26 L168,22 L192,18 L216,14 L240,12 L264,10 L288,8 L320,6 L320,56 L0,56 Z" fill="url(#sparkFill)"/>
-                    <path d="M0,46 L24,42 L48,40 L72,36 L96,32 L120,30 L144,26 L168,22 L192,18 L216,14 L240,12 L264,10 L288,8 L320,6" fill="none" stroke="#FF5A3F" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                  <div class="agg-spark-cap mono">PUBLIC MENTIONS · 14 DAYS · &uarr; 412%</div>
-                  <div class="agg-angle">
-                    <span class="agg-angle-lbl mono">SUGGESTED ANGLE</span>
-                    <p>The buffer zone vanished between draft and amendment. Three sponsors took $42K from the developer's PAC since 2024. The fiscal note doesn't pencil. Lead with the timeline.</p>
-                  </div>
-                  <div class="agg-dispatch">
-                    <span class="agg-dispatch-lbl mono">DISPATCHED TO</span>
-                    <span class="agg-chip"><span class="agg-av agg-av--sm" style="--c:#0070A8">EM</span> E. Mar</span>
-                    <span class="agg-chip"><span class="agg-av agg-av--sm" style="--c:#D6321F">JK</span> J. Kwan</span>
-                  </div>
-                </div>
-              </div>
-
-              <footer class="console-foot mono">
-                <span>This week · 6 fires detected · 4 briefs shipped · 0 corrections</span>
-                <span class="console-runtime">Detect &rarr; brief · <b>~6 min</b></span>
-              </footer>
-            </div>
-
-            <div class="vs-strip" aria-label="Speed of response">
-              <p class="vs-head mono">Speed of response</p>
-              <div class="vs-row vs-row--them">
-                <span class="vs-label mono">Legacy advocacy</span>
-                <span class="vs-bar"><span class="vs-fill" style="--w:96%"></span></span>
-                <span class="vs-num mono">~21 days</span>
-              </div>
-              <div class="vs-row vs-row--us">
-                <span class="vs-label mono">SeaFor agents</span>
-                <span class="vs-bar"><span class="vs-fill vs-fill--accent" style="--w:6%"></span></span>
-                <span class="vs-num mono">~2 hours</span>
-              </div>
-              <p class="vs-foot mono">Fire lit → brief shipped → voices dispatched</p>
-            </div>
-          </aside>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -936,7 +804,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 04 · The immediate opportunity</span>
+          <span class="section-kicker mono uppercase small">§ 03 · The immediate opportunity</span>
         </div>
 
         <div class="opp-grid">
@@ -980,7 +848,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 05 · Flagship product preview</span>
+          <span class="section-kicker mono uppercase small">§ 04 · Flagship product preview</span>
         </div>
 
         <div class="tracker-intro">
@@ -1102,6 +970,22 @@
           The Tracker is the public engine. <span data-brand-name>SeaFor</span> is the org behind it. Civic literacy, mobilization, and accountability.
         </p>
       </div>
+
+      <!-- Marquee: editorial swagger, restrained color -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>What passed</span><span class="bullet">●</span>
+          <span>What stalled</span><span class="bullet">●</span>
+          <span>What changed</span><span class="bullet">●</span>
+          <span>Who voted for it</span><span class="bullet">●</span>
+          <span>Spin vs. reality</span><span class="bullet">●</span>
+          <span>What passed</span><span class="bullet">●</span>
+          <span>What stalled</span><span class="bullet">●</span>
+          <span>What changed</span><span class="bullet">●</span>
+          <span>Who voted for it</span><span class="bullet">●</span>
+          <span>Spin vs. reality</span><span class="bullet">●</span>
+        </div>
+      </div>
     </section>
 
     <!-- MEDIA -->
@@ -1109,7 +993,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 06 · Media</span>
+          <span class="section-kicker mono uppercase small">§ 05 · Media</span>
         </div>
 
         <div class="media-grid">
@@ -1117,7 +1001,6 @@
             <h2 class="display-2">Changing the narrative.<br/>And the <em class="nobr">rapid response</em>.</h2>
             <p class="lede">There's a shortage of media outlets representing the moderate middle. The Seattle Times is blocked by a paywall. Local broadcast news has its moments, but who watches TV? The Stranger runs communist and grown-ups who should know better get seduced. Everything in between is hit-or-miss at best, or a podcast nobody listens to. Meanwhile, TikTok is taken for news. Normies have been polite for so long we forgot how to be loud. We're done being nice.</p>
             <p class="media-sub"><span data-brand-name>SeaFor</span> aggregates coverage of current hot topics, shining a spotlight on the sources with accurate, in-depth reporting most likely to inform. And we publish original commentary that pokes fun at the propaganda pretending to be fact. Witty, sarcastic, sourced, and designed to generate views. The pragmatic center can be loud and opinionated. We will not roll over.</p>
-            <p class="mono small uppercase media-status">Section pending</p>
           </div>
 
           <div class="media-cols">
@@ -1158,7 +1041,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 07 · Politics</span>
+          <span class="section-kicker mono uppercase small">§ 06 · Politics</span>
         </div>
 
         <div class="politics-grid">
@@ -1168,9 +1051,9 @@
           </div>
 
           <aside class="politics-stub" aria-label="Section status">
-            <span class="mono small uppercase politics-pill">Under legal review</span>
-            <h3>Live after counsel signs off.</h3>
-            <p>Outside counsel is engaged to ensure compliance with 501(c)(4) tax-exempt status, which comes with specific rules about what we can do, when, and on whose behalf. We'll publish this section the week after the framework is locked, not before.</p>
+            <span class="mono small uppercase politics-pill">Coming soon</span>
+            <h3>Races, candidates, endorsements.</h3>
+            <p>This is where the election work will live. Tracking is the day job; politics is the point. The 2026 District 5 test run ties directly to the 2027 pragmatic majority play.</p>
             <ul class="politics-list mono small">
               <li><span class="cl-key">2026</span><span class="cl-val">District 5 · first test</span></li>
               <li><span class="cl-key">2027</span><span class="cl-val">All seven district seats</span></li>
@@ -1187,7 +1070,7 @@
       <div class="container">
         <div class="section-head">
           <span class="rule"></span>
-          <span class="section-kicker mono uppercase small">§ 08 · Why support this now</span>
+          <span class="section-kicker mono uppercase small">§ 07 · Why support this now</span>
         </div>
 
         <div class="support-grid">
@@ -1229,7 +1112,6 @@
 
         <blockquote class="pullquote">
           <p>"Three to five badasses beats fifteen validators. A decorative board slows decisions, leaks strategy, and gives everyone veto power without responsibility."</p>
-          <cite class="mono small">Internal note</cite>
         </blockquote>
       </div>
     </section>
@@ -1238,7 +1120,7 @@
     <section class="section section-contact" id="contact">
       <div class="container contact-row">
         <div class="contact-left">
-          <span class="section-kicker mono uppercase small">§ 09 · Talk to us</span>
+          <span class="section-kicker mono uppercase small">§ 08 · Talk to us</span>
           <h2 class="display-1">
             Lead donors. Closed-door<br/>conversations only.
           </h2>
@@ -1282,8 +1164,7 @@
 
       <p class="footer-legal mono small">
         A Washington 501(c)(4) social welfare organization, forming.<br/>
-        Independent of any campaign committee. Activities subject to counsel review.<br/>
-        Working name. Brand may evolve. The argument will not.
+        Independent of any campaign committee. Activities subject to counsel review.
       </p>
 
       <p class="footer-meta mono small">
