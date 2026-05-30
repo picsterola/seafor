@@ -153,3 +153,29 @@
     status.classList.add('is-success');
   });
 })();
+
+/* Donate widget · placeholder interactions (no payment processor yet) */
+(function () {
+  var widget = document.querySelector('.donate-widget');
+  if (!widget) return;
+
+  var toggleBtns = widget.querySelectorAll('.donate-toggle-btn');
+  toggleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      toggleBtns.forEach(function (b) {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  var tiers = widget.querySelectorAll('.donate-tier');
+  tiers.forEach(function (tier) {
+    tier.addEventListener('click', function () {
+      tiers.forEach(function (t) { t.classList.remove('is-selected'); });
+      tier.classList.add('is-selected');
+    });
+  });
+})();
