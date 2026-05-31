@@ -54,8 +54,8 @@
         <a href="#tracker">Bill Tracker</a>
         <a href="#media">Hot Topics</a>
         <a href="#politics">Politics</a>
-        <a href="#support">Support</a>
-        <a href="./contact.html">Talk to us</a>
+        <a href="#support">Support Us</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
@@ -63,7 +63,7 @@
           <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.5" y1="4.5" x2="6.6" y2="6.6"/><line x1="17.4" y1="17.4" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.6" y2="17.4"/><line x1="17.4" y1="6.6" x2="19.5" y2="4.5"/></g></svg>
           <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z" fill="currentColor"/></svg>
         </button>
-        <a class="btn btn-primary" href="./contact.html">Talk to Us</a>
+        <a class="btn btn-primary" href="#support">Support Us</a>
       </div>
     </div>
   </header>
@@ -90,7 +90,7 @@
         <p class="hero-tagline">Waging the pragmatic <em>counterinsurgency</em>, fueled by real-time information and giving a shit.</p>
 
         <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="./contact.html">Back the project</a>
+          <a class="btn btn-primary btn-lg" href="#support">Back the project</a>
           <a class="btn btn-link btn-lg" href="#work">See the plan <span aria-hidden="true">↘</span></a>
         </div>
 
@@ -1070,7 +1070,7 @@
           </div>
         </div>
 
-        <div class="donate-widget" aria-labelledby="donate-heading">
+        <div class="donate-widget" id="donate" aria-labelledby="donate-heading">
           <div class="donate-head">
             <span class="mono small uppercase">Support the work</span>
             <h3 id="donate-heading" class="donate-title">Donate</h3>
@@ -1086,12 +1086,164 @@
             <button type="button" class="donate-tier" data-donate-amount="50000">$50,000</button>
             <button type="button" class="donate-tier donate-tier--other" data-donate-amount="other">Other amount</button>
           </div>
-          <p class="donate-note mono small">Payment processing pending. The widget is in place; the back-end goes live before the public launch.</p>
+
+          <div class="donate-other" id="donateOther" hidden>
+            <label for="donateOtherAmount">
+              <span class="mono small uppercase">Other amount</span>
+              <span class="donate-other-field">
+                <span class="donate-currency" aria-hidden="true">$</span>
+                <input id="donateOtherAmount" name="donateOtherAmount" type="number" inputmode="numeric" min="1" step="1" placeholder="Enter an amount" />
+              </span>
+            </label>
+          </div>
+
+          <!--
+            DONATION PROCESSOR EMBED · CommitChange + Stripe
+            =================================================
+            MANUAL TODO before public launch: paste the live CommitChange
+            embed snippet (which wraps Stripe) into the container below.
+            The platform decision is CommitChange + Stripe.
+
+            CommitChange typically provides either:
+              (a) an <iframe> embed, e.g.
+                  <iframe src="https://us.commitchange.com/embeds/.../donate"
+                          width="100%" height="900" frameborder="0"></iframe>
+              (b) a script + button snippet, e.g.
+                  <script src="https://us.commitchange.com/embed.js"></script>
+                  <a href="#" data-commitchange-embedded
+                     data-nonprofit-id="NONPROFIT_ID">Donate</a>
+
+            The selected frequency (one-time / annual) and amount tiers above
+            ($1,000 / $5,000 / $10,000 / $50,000 / Other) should be passed to
+            the embed via its supported query params / data-attributes once the
+            real nonprofit ID and embed code are available. No real payment
+            link is wired up yet — do not invent one.
+          -->
+          <div class="donate-embed" id="donateEmbed" data-donate-embed="commitchange-stripe">
+            <!-- CommitChange + Stripe embed goes here -->
+            <p class="donate-embed-placeholder mono small">
+              Secure donations via <b>CommitChange</b> + <b>Stripe</b> are being connected.
+              The embed loads here before the public launch.
+            </p>
+          </div>
+
+          <p class="donate-note mono small">Payment processing pending. The widget is in place; the CommitChange + Stripe embed goes live before the public launch.</p>
+
           <div class="donate-contact">
             <span class="mono small uppercase">Contact <span data-brand-name>SeaFor</span></span>
+            <p class="donate-contact-lede">Questions, intros, or a note to a founder? Write to us. Goes straight to the inbox, no list, no CRM.</p>
+            <form class="donate-msg" id="donateMsg" novalidate>
+              <label for="donateEmail" class="donate-msg-label">
+                <span>Your email</span>
+                <input id="donateEmail" name="donateEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
+              </label>
+              <label for="donateMessage" class="donate-msg-label">
+                <span>Message</span>
+                <textarea id="donateMessage" name="donateMessage" rows="4" placeholder="A sentence is fine. A paragraph is better. We read everything." required></textarea>
+              </label>
+              <div class="donate-msg-actions">
+                <button type="submit" class="btn btn-primary">Send to info@seafor.live</button>
+                <span class="form-status" id="donateMsgStatus" role="status" aria-live="polite"></span>
+              </div>
+            </form>
             <a class="donate-email" href="mailto:info@seafor.live">info@seafor.live</a>
-            <span class="mono small donate-contact-note">Inbound mailbox pending integration.</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (accessible via Support Us) -->
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="rule"></span>
+          <span class="section-kicker mono uppercase small">§ D · Questions donors actually ask</span>
+        </div>
+
+        <h2 class="display-2 faq-title">
+          The blunt FAQ.
+        </h2>
+
+        <div class="faq-list">
+          <details class="faq" open>
+            <summary>
+              <span>How does SeaFor interact with other pragmatic efforts?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p><span data-brand-name>SeaFor</span>'s mission is to strengthen the ecosystem of like-minded efforts, through partnerships, financial support, and so on, not compete with them. The movement left has built a vertically integrated political machine, with Legislative District leadership, labor, city-subsidized nonprofits, and disproportionately influential media outlets working in loose concert to advance common priorities. We've got to get our act together as well. The more pragmatic-oriented entities can coordinate efforts, the better.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>How is SeaFor different from other pragmatic efforts?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Speed and coordination. Agentic AI watches every Council packet, amendment, and viral pile-on the moment it posts. Within hours, not weeks, we package the receipts (fiscal notes, SEEC filings, prior votes, comparable cities) and hand briefs to center-pragmatic writers, podcasters, and thought leaders. The agents bring the speed. Humans bring the wit, the sources, and the spine.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>Is my contribution disclosed publicly?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Contributions to a Washington 501(c)(4) are not publicly disclosed at the donor level. PAC and independent expenditure activity, when it occurs, follows separate disclosure rules under WA PDC and SEEC. We'll walk you through which lane fits your goals before any commitment.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>Is this a campaign committee?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>No. <span data-brand-name>SeaFor</span> is the 501(c)(4) civic infrastructure entity. Electoral activity runs through a separate PAC / IE structure with a clean firewall. The c4 builds the operating system. The PAC, when it operates, plays in its own clearly-marked lane.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>What is the first 90-day budget?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Counsel and other start-up costs, the public website, and the 2026 District 5 race. We can share the line-item budget with interested donors upon request.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>How small can a meaningful contribution be?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>One-time donations of any amount are welcome but if you can commit to an annual gift, that allows us to focus on the public-facing product over fundraising activities. If money's a problem, there are real ways to support that aren't financial: warm intros, civic partnership, content collaboration and so on. Tell us what you've got. We're more interested in your super powers than the largest checks.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>Can I support privately?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Yes. Contributions to 501(c)(4) nonprofits are anonymous but not tax deductible. Many of our supporters operate businesses, sit on boards, or hold positions where public political activity isn't tenable.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>What if I disagree with you on a specific issue?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Good. We back outcomes-focused governance on the issues that impact real lives: public safety, homelessness, addiction recovery, housing, economic development, etc. Disagreements on individual issues are welcome and enrich the conversation. What matters is how City Hall addresses them. If you agree all perspectives should be respected and that policymakers should hold themselves accountable for the results of their votes and investments, we're good.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>

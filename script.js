@@ -171,11 +171,54 @@
     });
   });
 
+  var other = document.getElementById('donateOther');
+  var otherInput = document.getElementById('donateOtherAmount');
   var tiers = widget.querySelectorAll('.donate-tier');
   tiers.forEach(function (tier) {
     tier.addEventListener('click', function () {
       tiers.forEach(function (t) { t.classList.remove('is-selected'); });
       tier.classList.add('is-selected');
+      var isOther = tier.getAttribute('data-donate-amount') === 'other';
+      if (other) {
+        other.hidden = !isOther;
+        if (isOther && otherInput) otherInput.focus();
+      }
     });
   });
+
+  // --- Donor contact box: opens the user's mail client to info@seafor.live ----
+  var msgForm = document.getElementById('donateMsg');
+  if (msgForm) {
+    var msgStatus = document.getElementById('donateMsgStatus');
+    var donorTo = 'info@seafor.live';
+    msgForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (msgStatus) msgStatus.classList.remove('is-success', 'is-error');
+
+      var data = new FormData(msgForm);
+      var email = (data.get('donateEmail') || '').toString().trim();
+      var message = (data.get('donateMessage') || '').toString().trim();
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !message) {
+        if (msgStatus) {
+          msgStatus.textContent = 'Add a real email and a short message, then try again.';
+          msgStatus.classList.add('is-error');
+        }
+        return;
+      }
+
+      var subject = 'SeaFor · message from ' + email;
+      var body = ['From: ' + email, '', message].join('\n');
+      var href = 'mailto:' + donorTo +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      window.location.href = href;
+
+      if (msgStatus) {
+        msgStatus.textContent = 'Opening your email client. If nothing happens, write to ' + donorTo + ' directly.';
+        msgStatus.classList.add('is-success');
+      }
+    });
+  }
 })();
