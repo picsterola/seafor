@@ -154,37 +154,40 @@
   });
 })();
 
-/* Donate widget · placeholder interactions (no payment processor yet) */
+/* Donate widget · quick-pick tiers drive the Anedot iframe via ?amount=N */
 (function () {
   var widget = document.querySelector('.donate-widget');
   if (!widget) return;
 
-  var toggleBtns = widget.querySelectorAll('.donate-toggle-btn');
-  toggleBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      toggleBtns.forEach(function (b) {
-        b.classList.remove('is-active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-selected', 'true');
-    });
-  });
-
-  var other = document.getElementById('donateOther');
-  var otherInput = document.getElementById('donateOtherAmount');
+  var embedHost = document.getElementById('donateEmbed');
+  var iframe = embedHost ? embedHost.querySelector('iframe') : null;
+  var baseUrl = embedHost ? embedHost.getAttribute('data-donate-base') : null;
   var tiers = widget.querySelectorAll('.donate-tier');
-  tiers.forEach(function (tier) {
-    tier.addEventListener('click', function () {
-      tiers.forEach(function (t) { t.classList.remove('is-selected'); });
-      tier.classList.add('is-selected');
-      var isOther = tier.getAttribute('data-donate-amount') === 'other';
-      if (other) {
-        other.hidden = !isOther;
-        if (isOther && otherInput) otherInput.focus();
-      }
+
+  if (iframe && baseUrl) {
+    tiers.forEach(function (tier) {
+      tier.addEventListener('click', function () {
+        var amount = tier.getAttribute('data-donate-amount');
+        if (!amount) return;
+
+        tiers.forEach(function (t) {
+          t.classList.remove('is-selected');
+          t.setAttribute('aria-pressed', 'false');
+        });
+        tier.classList.add('is-selected');
+        tier.setAttribute('aria-pressed', 'true');
+
+        // Anedot supports ?amount=N to preselect (and create) an amount button.
+        // Frequency is set inside the Anedot form itself — no URL param is supported.
+        var sep = baseUrl.indexOf('?') === -1 ? '?' : '&';
+        iframe.src = baseUrl + sep + 'amount=' + encodeURIComponent(amount);
+
+        if (embedHost.scrollIntoView) {
+          embedHost.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
     });
-  });
+  }
 
   // --- Donor contact box: opens the user's mail client to info@seafor.live ----
   var msgForm = document.getElementById('donateMsg');
