@@ -1072,62 +1072,17 @@
 
         <div class="donate-widget" id="donate" aria-labelledby="donate-heading">
           <div class="donate-head">
-            <span class="mono small uppercase">Support the work</span>
-            <h3 id="donate-heading" class="donate-title">Donate</h3>
-          </div>
-          <div class="donate-toggle" role="tablist" aria-label="Donation frequency">
-            <button type="button" class="donate-toggle-btn is-active" role="tab" aria-selected="true" data-donate-freq="once">One-time</button>
-            <button type="button" class="donate-toggle-btn" role="tab" aria-selected="false" data-donate-freq="annual">Annually</button>
-          </div>
-          <div class="donate-tiers">
-            <button type="button" class="donate-tier" data-donate-amount="1000">$1,000</button>
-            <button type="button" class="donate-tier" data-donate-amount="5000">$5,000</button>
-            <button type="button" class="donate-tier" data-donate-amount="10000">$10,000</button>
-            <button type="button" class="donate-tier" data-donate-amount="50000">$50,000</button>
-            <button type="button" class="donate-tier donate-tier--other" data-donate-amount="other">Other amount</button>
+            <span class="mono small uppercase" id="donate-heading">Support the work</span>
           </div>
 
-          <div class="donate-other" id="donateOther" hidden>
-            <label for="donateOtherAmount">
-              <span class="mono small uppercase">Other amount</span>
-              <span class="donate-other-field">
-                <span class="donate-currency" aria-hidden="true">$</span>
-                <input id="donateOtherAmount" name="donateOtherAmount" type="number" inputmode="numeric" min="1" step="1" placeholder="Enter an amount" />
-              </span>
-            </label>
+          <div class="donate-embed" id="donateEmbed" data-donate-embed="anedot">
+            <iframe
+              src="https://secure.anedot.com/seafor/5e188c23-d653-4f40-bb2c-440c27ebe73a?embed=true"
+              title="SeaFor donation form"
+              loading="lazy"
+              allow="payment"
+              frameborder="0"></iframe>
           </div>
-
-          <!--
-            DONATION PROCESSOR EMBED · CommitChange + Stripe
-            =================================================
-            MANUAL TODO before public launch: paste the live CommitChange
-            embed snippet (which wraps Stripe) into the container below.
-            The platform decision is CommitChange + Stripe.
-
-            CommitChange typically provides either:
-              (a) an <iframe> embed, e.g.
-                  <iframe src="https://us.commitchange.com/embeds/.../donate"
-                          width="100%" height="900" frameborder="0"></iframe>
-              (b) a script + button snippet, e.g.
-                  <script src="https://us.commitchange.com/embed.js"></script>
-                  <a href="#" data-commitchange-embedded
-                     data-nonprofit-id="NONPROFIT_ID">Donate</a>
-
-            The selected frequency (one-time / annual) and amount tiers above
-            ($1,000 / $5,000 / $10,000 / $50,000 / Other) should be passed to
-            the embed via its supported query params / data-attributes once the
-            real nonprofit ID and embed code are available. No real payment
-            link is wired up yet — do not invent one.
-          -->
-          <div class="donate-embed" id="donateEmbed" data-donate-embed="commitchange-stripe">
-            <!-- CommitChange + Stripe embed goes here -->
-            <p class="donate-embed-placeholder mono small">
-              Secure donations via <b>CommitChange</b> + <b>Stripe</b> are being connected.
-              The embed loads here before the public launch.
-            </p>
-          </div>
-
-          <p class="donate-note mono small">Payment processing pending. The widget is in place; the CommitChange + Stripe embed goes live before the public launch.</p>
 
           <div class="donate-contact">
             <span class="mono small uppercase">Contact <span data-brand-name>SeaFor</span></span>
@@ -1146,7 +1101,6 @@
                 <span class="form-status" id="donateMsgStatus" role="status" aria-live="polite"></span>
               </div>
             </form>
-            <a class="donate-email" href="mailto:info@seafor.live">info@seafor.live</a>
           </div>
         </div>
       </div>
