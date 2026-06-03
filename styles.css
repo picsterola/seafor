@@ -882,11 +882,15 @@ p { margin: 0 0 1em; }
 .donate-contact-note { color: var(--fg-3); }
 .donate-contact-lede { color: var(--fg-2); margin: 0; max-width: 52ch; }
 
-/* Anedot donation form embed container */
+/* Anedot donation form embed container
+   Sized to fit the Anedot form without an inner scrollbar.
+   Measured form heights (June 2026):
+     ~1310px @ 1280w, ~1400px @ 768w, ~1500px @ 390w.
+   Container heights include ~40px breathing room below the form footer. */
 .donate-embed {
   position: relative;
   width: 100%;
-  min-height: 720px;
+  min-height: 1360px;
   border: 1px solid var(--rule);
   border-radius: var(--radius-md, 12px);
   overflow: hidden;
@@ -896,12 +900,16 @@ p { margin: 0 0 1em; }
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 720px;
+  min-height: 1360px;
   border: 0;
+}
+@media (max-width: 900px) {
+  .donate-embed,
+  .donate-embed iframe { min-height: 1440px; }
 }
 @media (max-width: 560px) {
   .donate-embed,
-  .donate-embed iframe { min-height: 820px; }
+  .donate-embed iframe { min-height: 1580px; }
 }
 
 /* Donor contact message box */
